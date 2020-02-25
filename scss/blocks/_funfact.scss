@@ -1,0 +1,60 @@
+/**
+Funfact Styles
+*/
+.funfact-wrap{
+    padding: 130px 0;
+}
+.funfact{
+    padding: 20px 0;
+    h2{
+        font-family: $heading-font;
+        font-weight: 500;
+        color: #ffffff;
+        margin-bottom: 3px;
+    }
+    h6{
+        color: #ffffff;
+        font-weight: 700;
+    }
+
+    &.funfact-2{
+        h6{
+            font-weight: 400;
+        }
+    }
+}
+
+.bg-white{
+    .funfact{
+        h2{
+            color: #666666;
+        }
+        h6{
+            color: #666666;
+        }
+    }
+}
+
+@media #{$xlg-layout}{
+    .funfact-wrap {
+        padding: 30px 0;
+    }
+}
+
+@media #{$lg-layout}{
+    .funfact-wrap{
+        padding: 30px 0;
+    }
+}
+
+@media #{$md-layout}{
+    .funfact-wrap{
+        padding: 0;
+    }
+}
+
+@media #{$sm-layout}{
+    .funfact-wrap{
+        padding: 0;
+    }
+}

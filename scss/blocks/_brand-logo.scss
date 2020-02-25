@@ -1,0 +1,34 @@
+/**
+Brand Logo Styles
+*/
+
+.brand-logos{
+    &.slider-navigation-style-1 {
+        .cr-navigation{
+            background: rgba(0,0,0, 0.5);
+            color: #ffffff;
+            &:hover{
+                background: $theme-color;
+                color: #ffffff;
+            }
+        }
+    }
+}
+.single-brand-logo{
+    a{
+        text-align: center;
+        min-height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            opacity: 0.4;
+            transition: 0.3s ease-in-out 0s;
+        }
+        &:hover{
+            img{
+                opacity: 1;
+            }
+        }
+    }
+}

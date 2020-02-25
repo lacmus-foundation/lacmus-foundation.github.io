@@ -1,0 +1,114 @@
+/**
+Contact Us
+*/
+
+.google-map{
+    min-height: 600px;
+}
+
+.contact-us-form {
+    text-align: center;
+    .row{
+        margin-top: -40px;
+    }
+    input,
+    textarea {
+        border: none;
+        border-bottom: 1px solid #dddddd;
+        margin-top: 40px;
+        text-align: center;
+        color: #666666;
+        letter-spacing: 0.5px;
+        &:-moz-placeholder {
+            color: #666666;
+            letter-spacing: 0.5px;
+        }
+        &::-moz-placeholder {
+            color: #666666;
+            letter-spacing: 0.5px;
+        }
+        &::-webkit-input-placeholder {
+            color: #666666;
+            letter-spacing: 0.5px;
+        }
+        &::-webkit-placeholder {
+            color: #666666;
+            letter-spacing: 0.5px;
+        }
+        &::placeholder {
+            color: #666666;
+            letter-spacing: 0.5px;
+        }
+    }
+    textarea{
+        min-height: 100px;
+        padding: 20px;
+    }
+    button{
+        display: inline-block;
+        border: 1px solid #ffffff;
+        width: auto;
+        padding: 0 40px;
+        background: #ffffff;
+        height: 45px;
+        margin-top: 40px;
+        &:hover{
+            background: $theme-color;
+            border-color: $theme-color;
+            color: #ffffff;
+        }
+    }
+}
+
+.contact-us-iconbox{
+    padding: 0 30px;
+    padding-top: 50px;
+    display: block;
+    i{
+        font-size: 20px;
+    }
+    p{
+        margin-top: 8px;
+        margin-bottom: 0;
+    }
+    a{
+        color: #666666;
+        font-weight: 600;
+        &:hover{
+            color: $theme-color;
+        }
+    }
+}
+
+
+.contact-us-content{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+@media #{$md-layout}{
+    .google-map{
+        min-height: 450px;
+    }
+}
+
+@media #{$sm-layout}{
+    .google-map{
+        min-height: 400px;
+    }
+    .contact-us-content{
+        margin-top: 30px;
+    }
+    .contact-us-iconbox{
+        margin-top: 3px;
+    }
+}
+
+.form-message{
+    &.success{
+        color: $theme-color;
+    }
+    &.error{
+        color: #ff1100;
+    }
+}

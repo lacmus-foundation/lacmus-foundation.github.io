@@ -1,0 +1,239 @@
+/**
+Slider Elements
+*/
+
+/* Slider Navigation Style 1 */
+.slider-navigation-style-1{
+    position: relative;
+    .cr-navigation{
+        position: absolute;
+        top: 50%;
+        height: 50px;
+        width: 50px;
+        display: inline-block;
+        vertical-align: middle;
+        padding: 12px 0;
+        font-size: 26px;
+        background: rgba(255,255,255,0.8);
+        text-align: center;
+        margin-top: -25px;
+        z-index: 1;
+        transition: all 0.3s ease-in-out 0s;
+        cursor: pointer;
+        visibility: hidden;
+        opacity: 0;
+        &:hover{
+            background: $theme-color;
+            color: #ffffff;
+        }
+    }
+    .cr-navigation-prev{
+        left: 0;
+        right: auto;
+    }
+    .cr-navigation-next{
+        right: 0;
+        left: auto;
+    }
+    &:hover{
+        .cr-navigation{
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+
+/* Slider Navigation Style 2 */
+.slider-navigation-style-2{
+    position: relative;
+    .cr-navigation{
+        position: absolute;
+        top: 50%;
+        height: 70px;
+        width: 35px;
+        display: inline-block;
+        vertical-align: middle;
+        padding: 18px 0;
+        font-size: 32px;
+        background: rgba(255,255,255, 1);
+        text-align: center;
+        margin-top: -25px;
+        z-index: 1;
+        transition: all 0.3s ease-in-out 0s;
+        cursor: pointer;
+        visibility: hidden;
+        opacity: 0;
+        color: #333333;
+        &:hover{
+            background: $theme-color;
+            color: #ffffff;
+            width: 65px;
+        }
+    }
+    .cr-navigation-prev{
+        left: 0;
+        right: auto;
+    }
+    .cr-navigation-next{
+        right: 0;
+        left: auto;
+    }
+    &:hover{
+        .cr-navigation{
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+@media #{$lg-layout}{
+    .slider-navigation-style-2{
+        position: relative;
+        .cr-navigation{
+            height: 50px;
+            width: 25px;
+            padding: 12px 0;
+            font-size: 26px;
+            margin-top: -20px;
+            &:hover{
+                width: 45px;
+            }
+        }
+    }
+}
+
+@media #{$md-layout}{
+    .slider-navigation-style-2{
+        position: relative;
+        .cr-navigation{
+            height: 50px;
+            width: 25px;
+            padding: 12px 0;
+            font-size: 26px;
+            margin-top: -20px;
+            &:hover{
+                width: 45px;
+            }
+        }
+    }
+}
+
+@media #{$sm-layout}{
+    .slider-navigation-style-2{
+        position: relative;
+        .cr-navigation{
+            height: 50px;
+            width: 25px;
+            padding: 12px 0;
+            font-size: 26px;
+            margin-top: -20px;
+            &:hover{
+                width: 45px;
+            }
+        }
+    }
+}
+
+
+
+
+/* Slider Navigation Style 3 */
+.slider-navigation-style-3{
+    position: relative;
+    .cr-navigation{
+        position: absolute;
+        top: auto;
+        bottom: 30px;
+        height: 35px;
+        line-height: 33px;
+        width: 35px;
+        display: inline-block;
+        vertical-align: middle;
+        padding: 0 0;
+        font-size: 25px;
+        background: rgba(255,255,255, 1);
+        text-align: center;
+        z-index: 1;
+        transition: all 0.3s ease-in-out 0s;
+        cursor: pointer;
+        color: #333333;
+        &:hover{
+            background: $theme-color;
+            color: #ffffff;
+        }
+    }
+    .cr-navigation-prev{
+        left: auto;
+        right: 95px;
+    }
+    .cr-navigation-next{
+        right: 30px;
+        left: auto;
+    }
+}
+
+@media #{$sm-layout}{
+    .slider-navigation-style-3{
+        .cr-navigation-prev{
+            left: auto;
+            right: calc(50% + 10px);
+        }
+        .cr-navigation-next{
+            right: auto;
+            left: calc(50% + 10px);
+        }
+    }
+}
+
+/* Slider Navigation Style 4 */
+.slider-navigation-style-4{
+    position: relative;
+    padding-bottom: 80px;
+    background: #f6f6f6;
+    .cr-navigation{
+        position: absolute;
+        top: auto;
+        bottom: 27px;
+        display: inline-block;
+        vertical-align: middle;
+        padding: 0 0;
+        font-size: 14px;
+        text-align: center;
+        z-index: 1;
+        transition: all 0.3s ease-in-out 0s;
+        cursor: pointer;
+        color: #666666;
+        font-weight: 500;
+        i{
+            color: #999999;
+            transition: all 0.3s ease-in-out 0s;
+        }
+        &:hover{
+            color: $theme-color;
+            i{
+                color: $theme-color;
+            }
+        }
+    }
+    .cr-navigation-prev{
+        left: 17%;
+        right: auto;
+        i{
+            padding-right: 7px;
+        }
+    }
+    .cr-navigation-next{
+        right: 17%;
+        left: auto;
+        i{
+            padding-left: 7px;
+        }
+    }
+    @media #{$sm-layout}{
+        padding-bottom: 50px;
+        .cr-navigation{
+            bottom: 13px;
+        }
+    }
+}

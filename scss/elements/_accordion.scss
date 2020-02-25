@@ -1,0 +1,62 @@
+/**
+Accordion Styles
+*/
+
+.cr-accordion{
+    padding: 30px 0;
+    margin-right: 50px;
+    border-bottom: 2px solid #ffffff;
+    &:last-child{
+        border-bottom: none;
+    }
+}
+.cr-accordion-heading{
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 0;
+    a{
+        color: #dddddd;
+        position: relative;
+        display: block;
+        &::after{
+            font-family: fontAwesome;
+            position: absolute;
+            top: 0;
+            color: #666666;
+            font-size: 13px;
+            background: #eeeeee;
+            text-align: center;
+            left: calc(100% + 20px);
+            height: 30px;
+            width: 30px;
+            line-height: 32px;
+            border-radius: 100%;
+            color: #666666;
+        }
+        &:not(.collapsed){
+            &::after{
+                content: "\f068";
+                color: $theme-color;
+            }
+        }
+        &.collapsed{
+            &::after{
+                content: "\f067";
+            }
+        }
+    }
+}
+
+.accordion-body{
+    padding-top: 30px;
+    color: #dddddd;
+}
+
+@media #{$xs-layout}{
+    .cr-accordion-heading{
+        font-size: 16px;
+        a::after{
+            left: 100%;
+        }
+    }
+}
