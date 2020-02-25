@@ -1,0 +1,91 @@
+/**
+Comment Styles
+*/
+
+.single-comment{
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    &.reply-comment{
+        padding-left: 200px;
+    }
+}
+.single-comment-thumb{
+    margin-right: 28px;
+    flex: 0 0 170px;
+}
+.single-comment-content{
+    flex-shrink: 100;
+    h6{
+        font-size: 16px;
+        line-height: 32px;
+        color: #666666;
+        font-weight: 700;
+        margin-bottom: 10px;
+        a{
+            color: #666666;
+            &:hover{
+                color: $theme-color;
+            }
+        }
+    }
+}
+.commenter-reply{
+    display: inline-block;
+    font-size: 14px;
+    line-height: 28px;
+    color: #666666;
+    font-weight: 700;
+    &:hover{
+        color: $theme-color;
+    }
+}
+
+@media #{$lg-layout}{
+    .single-comment.reply-comment{
+        padding-left: 65px;
+    }
+}
+
+@media #{$sm-layout}{
+    .single-comment.reply-comment{
+        padding-left: 45px;
+    }
+}
+
+@media #{$xs-layout}{
+    .single-comment{
+        flex-wrap: wrap;
+        &.reply-comment{
+            padding-left: 45px;
+        }
+    }
+}
+
+
+
+/* Commentbox Styles */
+.commentbox{
+    input, textarea, button{
+        margin-top: 30px;
+        border: 1px solid #dddddd;
+        padding: 0 30px;
+    }
+    textarea{
+        padding: 20px 30px;
+        min-height: 200px;
+    }
+    button{
+        display: inline-block;
+        height: 45px;
+        line-height: 45px;
+        padding: 0 40px;
+        transition: all 0.4s ease-in-out 0s;
+        color: #666666;
+        &:hover{
+            background: $theme-color;
+            color: #ffffff;
+            border-color: $theme-color;
+        }
+    }
+}

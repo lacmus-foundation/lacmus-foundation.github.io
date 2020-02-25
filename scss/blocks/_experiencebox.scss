@@ -1,0 +1,33 @@
+/**
+Experiencebox
+*/
+
+.experiencebox{
+    background: #f6f6f6;
+    padding: 40px 30px;
+    margin-top: 30px;
+    transition: all 0.4s ease-in-out 0s;
+    h5{
+        font-size: 18px;
+        font-weight: 700;
+        transition: all 0.4s ease-in-out 0s;
+    }
+    h6{
+        font-size: 14px;
+        color: #666666;
+        font-weight: 400;
+        transition: all 0.4s ease-in-out 0s;
+    }
+    p{
+        padding-top: 10px;
+        margin-bottom: 0;
+        transition: all 0.4s ease-in-out 0s;
+    }
+    &:hover{
+        background: $theme-color;
+        box-shadow: 0 0 15px rgba(0,0,0, 0.4);
+        h5, h6, p{
+            color: #ffffff;
+        }
+    }
+}

@@ -1,0 +1,95 @@
+/**
+Contact Me Styles
+*/
+
+.contact-me-top-content {
+    padding-top: 50px;
+    padding-bottom: 80px;
+    &>p {
+        margin-top: 30px;
+        line-height: 28px;
+    }
+}
+
+.contact-me-info {
+    padding-top: 20px;
+    p {
+        margin-bottom: 18px;
+        a{
+            color: #666666;
+            &:hover{
+                color: $theme-color;
+            }
+        }
+    }
+    p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.contact-me-form {
+    text-align: center;
+    .row{
+        margin-top: -40px;
+    }
+    input,
+    textarea {
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        margin-top: 40px;
+        text-align: center;
+        color: #fff;
+        letter-spacing: 0.5px;
+        &:-moz-placeholder {
+            color: #ffffff;
+            letter-spacing: 0.5px;
+        }
+        &::-moz-placeholder {
+            color: #ffffff;
+            letter-spacing: 0.5px;
+        }
+        &::-webkit-input-placeholder {
+            color: #ffffff;
+            letter-spacing: 0.5px;
+        }
+        &::-webkit-placeholder {
+            color: #ffffff;
+            letter-spacing: 0.5px;
+        }
+        &::placeholder {
+            color: #ffffff;
+            letter-spacing: 0.5px;
+        }
+    }
+    textarea{
+        min-height: 100px;
+        padding: 20px;
+    }
+    button{
+        display: inline-block;
+        border: 1px solid rgba(255,255,255,0.5);
+        width: auto;
+        padding: 0 40px;
+        margin-top: 40px;
+        height: 45px;
+        color: #ffffff;
+        &:hover{
+            background:rgba(255,255,255,0.2);
+        }
+    }
+}
+
+
+@media #{$lg-layout}{
+    .contact-me-form{
+        padding: 0 15%;
+    }
+}
+
+
+@media #{$sm-layout}{
+    .contact-me-top-content {
+        padding-top: 30px;
+        padding-bottom: 50px;
+    }
+}

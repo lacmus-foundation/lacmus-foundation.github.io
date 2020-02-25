@@ -1,0 +1,161 @@
+/**
+Navigation Styles
+*/
+
+.mainmenu {
+	text-align: left;
+	 & > ul {
+		margin-bottom: 0;
+		padding-left: 0;
+		font-size: 0;
+		backface-visibility: hidden;
+		& > li {
+			display: inline-block;
+			position: relative;
+			font-size: 16px;
+
+			& > a {
+				display: inline-block;
+				font-size: 16px;
+				line-height: 28px;
+				color: #ffffff;
+				padding: 35px 20px;
+				position: relative;
+				&::before {
+					content: "";
+					position: absolute;
+					width: calc(100% - 40px);
+					left: 20px;
+					top: 50%;
+					height: 1px;
+					background: #ffffff;
+					transform: translateY(10px) scaleX(0);
+					transition: all 0.4s ease-out 0s;
+					transform-origin: top left;
+				}
+			}
+			&:hover, &.current{
+				& > a{
+					&::before{
+						transform: translateY(10px) scaleX(1);
+					}
+				}
+			}
+
+			&:first-child {
+				& > a {
+					padding-left: 0;
+					&:before{
+						width: calc(100% - 20px);;
+						left: 0;
+					}
+				}
+			}
+
+			&:last-child {
+				& > a {
+					padding-right: 0;
+					&:before{
+						width: calc(100% - 20px);;
+					}
+				}
+			}
+
+		}
+	}
+}
+
+.bg-white{
+	.mainmenu{
+		ul{
+			li{
+				a{
+					color: #333333;
+					&::before{
+						background: #333333;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Dropdown */
+.mainmenu  .cr-dropdown{
+	position: relative;
+	&:hover{
+		& > ul{
+			transform: scaleY(1);
+		}
+	}
+}
+.mainmenu .cr-dropdown{
+	text-align: left;
+	ul{
+		position: absolute;
+		left: 0;
+		top: 100%;
+		background: rgba($theme-color,0.97);
+		width: 260px;
+		padding-left: 0;
+		margin-bottom: 0;
+		padding: 15px 0;
+		box-shadow: 0 0 20px rgba(0,0,0,0.1);
+		transform: scaleY(0);
+		transform-origin: center top;
+		transition: all 0.2s ease-out 0s;
+		z-index: 30;
+		li{
+			padding: 0 20px;
+			display: block;
+			position: relative;
+			a{
+				display: block;
+				padding: 5px 0;
+				color: #ffffff;
+				font-size: 14px;
+				position: relative;
+				&:before{
+					content: "";
+					position: absolute;
+					left: 0;
+					top: 50%;
+					height: 1px;
+					background: #ffffff;
+					width: 0;
+					transition: all 0.4s ease-in-out 0s;
+				}
+			}
+			&:hover{
+				& > a{
+					padding-left: 15px;
+					&:before{
+						width: 10px;
+					}
+				}
+				& > ul{
+					transform: scaleY(1);
+				}
+			}
+
+			/* Sub Dropdown */
+			ul{
+				position: absolute;
+				left: calc(100% + 1px);
+				top: 0;
+			}
+		}
+	}
+
+	&.last-element{
+		& > ul{
+			left: auto;
+			right: 0;
+		}
+		ul li ul{
+			left: auto;
+			right: calc(100% + 1px);
+		}
+	}	
+}
+

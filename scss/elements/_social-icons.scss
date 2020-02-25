@@ -1,0 +1,504 @@
+/**
+Social Icons Styles
+*/
+
+.social-icons {
+	ul {
+		padding-left: 0;
+		margin-bottom: 0;
+		list-style: none;
+		font-size: 0;
+		li {
+			display: inline-block;
+			margin: 0 7px;
+			list-style: none;
+			font-size: 16px;
+			&:first-child {
+				margin-left: 0;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+			a {
+				color: $body-color;
+				&:hover {
+					color: $theme-color;
+				}
+			}
+			&.facebook {
+				&:hover {
+					a {
+						color: #3B5998;
+					}
+				}
+			}
+			&.twitter {
+				&:hover {
+					a {
+						color: #00ACEE;
+					}
+				}
+			}
+			&.google-plus {
+				&:hover {
+					a {
+						color: #DD4B39;
+					}
+				}
+			}
+			&.pinterest {
+				&:hover {
+					a {
+						color: #C8232C;
+					}
+				}
+			}
+			&.linkedin {
+				&:hover {
+					a {
+						color: #0E76A8;
+					}
+				}
+			}
+			&.flickr {
+				&:hover {
+					a {
+						color: #FF0084;
+					}
+				}
+			}
+			&.dribbble {
+				&:hover {
+					a {
+						color: #EA4C89;
+					}
+				}
+			}
+			&.google {
+				&:hover {
+					a {
+						color: #DD4B39;
+					}
+				}
+			}
+			&.skype {
+				&:hover {
+					a {
+						color: #00AFF0;
+					}
+				}
+			}
+			&.youtube {
+				&:hover {
+					a {
+						color: #C4302B;
+					}
+				}
+			}
+			&.vimeo {
+				&:hover {
+					a {
+						color: #86C9EF;
+					}
+				}
+			}
+			&.yahoo {
+				&:hover {
+					a {
+						color: #720E9E;
+					}
+				}
+			}
+			&.paypal {
+				&:hover {
+					a {
+						color: #00588B;
+					}
+				}
+			}
+			&.instagram {
+				&:hover {
+					a {
+						color: $instagram;
+					}
+				}
+			}
+		}
+	}
+	&.social-icons-lg {
+		ul {
+			li {
+				font-size: 18px;
+			}
+		}
+	}
+}
+
+.social-icons-rounded {
+	ul {
+		li {
+			display: inline-block;
+			margin: 0 7px;
+			list-style: none;
+			font-size: 16px;
+			vertical-align: middle;
+			border-radius: 100px;
+			&:first-child {
+				margin-left: 0;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+			a {
+				color: $body-color;
+				height: 35px;
+				width: 35px;
+				display: inline-block;
+				vertical-align: middle;
+				text-align: center;
+				line-height: 35px;
+				color: #ffffff;
+				border-radius: 100px;
+				overflow: hidden;
+				font-size: 14px;
+			}
+			&.facebook {
+				a {
+					background: #3B5998;
+				}
+				&:hover {
+					a {
+						color: #3B5998;
+						background: #ffffff;
+					}
+				}
+			}
+			&.twitter {
+				a {
+					background: #00ACEE;
+				}
+				&:hover {
+					a {
+						color: #00ACEE;
+						background: #ffffff;
+					}
+				}
+			}
+			&.google-plus {
+				a {
+					background: #DD4B39;
+				}
+				&:hover {
+					a {
+						color: #DD4B39;
+						background: #ffffff;
+					}
+				}
+			}
+			&.pinterest {
+				a {
+					background: #C8232C;
+				}
+				&:hover {
+					a {
+						color: #C8232C;
+						background: #ffffff;
+					}
+				}
+			}
+			&.linkedin {
+				a {
+					background: #0E76A8;
+				}
+				&:hover {
+					a {
+						color: #0E76A8;
+						background: #ffffff;
+					}
+				}
+			}
+			&.flickr {
+				a {
+					background: #FF0084;
+				}
+				&:hover {
+					a {
+						color: #FF0084;
+						background: #ffffff;
+					}
+				}
+			}
+			&.dribbble {
+				a {
+					background: #EA4C89;
+				}
+				&:hover {
+					a {
+						color: #EA4C89;
+						background: #ffffff;
+					}
+				}
+			}
+			&.google {
+				a {
+					background: #DD4B39;
+				}
+				&:hover {
+					a {
+						color: #DD4B39;
+						background: #ffffff;
+					}
+				}
+			}
+			&.skype {
+				a {
+					background: #00AFF0;
+				}
+				&:hover {
+					a {
+						color: #00AFF0;
+						background: #ffffff;
+					}
+				}
+			}
+			&.youtube {
+				a {
+					background: #C4302B;
+				}
+				&:hover {
+					a {
+						color: #C4302B;
+						background: #ffffff;
+					}
+				}
+			}
+			&.vimeo {
+				a {
+					background: #86C9EF;
+				}
+				&:hover {
+					a {
+						color: #86C9EF;
+						background: #ffffff;
+					}
+				}
+			}
+			&.yahoo {
+				a {
+					background: #720E9E;
+				}
+				&:hover {
+					a {
+						color: #720E9E;
+						background: #ffffff;
+					}
+				}
+			}
+			&.paypal {
+				a {
+					background: #00588B;
+				}
+				&:hover {
+					a {
+						color: #00588B;
+						background: #ffffff;
+					}
+				}
+			}
+			&.instagram {
+				a {
+					background: $instagram;
+				}
+				&:hover {
+					a {
+						color: $instagram;
+						background: #ffffff;
+					}
+				}
+			}
+		}
+	}
+}
+
+.social-icons-rounded-reverse {
+	ul {
+		li {
+			display: inline-block;
+			margin: 0 7px;
+			list-style: none;
+			font-size: 16px;
+			vertical-align: middle;
+			border-radius: 100px;
+			&:first-child {
+				margin-left: 0;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+			a {
+				color: $body-color;
+				height: 35px;
+				width: 35px;
+				display: inline-block;
+				vertical-align: middle;
+				text-align: center;
+				line-height: 35px;
+				color: #666666;
+				border-radius: 100px;
+				overflow: hidden;
+				font-size: 14px;
+				background: #dddddd;
+			}
+			&.facebook {
+				&:hover {
+					a {
+						background: #3B5998;
+						color: #ffffff;
+					}
+				}
+			}
+			&.twitter {
+				&:hover {
+					a {
+						background: #00ACEE;
+						color: #ffffff;
+					}
+				}
+			}
+			&.google-plus {
+				&:hover {
+					a {
+						background: #DD4B39;
+						color: #ffffff;
+					}
+				}
+			}
+			&.pinterest {
+				&:hover {
+					a {
+						background: #C8232C;
+						color: #ffffff;
+					}
+				}
+			}
+			&.linkedin {
+				&:hover {
+					a {
+						background: #0E76A8;
+						color: #ffffff;
+					}
+				}
+			}
+			&.flickr {
+				&:hover {
+					a {
+						background: #FF0084;
+						color: #ffffff;
+					}
+				}
+			}
+			&.dribbble {
+				&:hover {
+					a {
+						background: #EA4C89;
+						color: #ffffff;
+					}
+				}
+			}
+			&.google {
+				&:hover {
+					a {
+						background: #DD4B39;
+						color: #ffffff;
+					}
+				}
+			}
+			&.skype {
+				&:hover {
+					a {
+						background: #00AFF0;
+						color: #ffffff;
+					}
+				}
+			}
+			&.youtube {
+				&:hover {
+					a {
+						background: #C4302B;
+						color: #ffffff;
+					}
+				}
+			}
+			&.vimeo {
+				&:hover {
+					a {
+						background: #86C9EF;
+						color: #ffffff;
+					}
+				}
+			}
+			&.yahoo {
+				&:hover {
+					a {
+						background: #720E9E;
+						color: #ffffff;
+					}
+				}
+			}
+			&.paypal {
+				&:hover {
+					a {
+						background: #00588B;
+						color: #ffffff;
+					}
+				}
+			}
+			&.instagram {
+				&:hover {
+					a {
+						background: $instagram;
+						color: #ffffff;
+					}
+				}
+			}
+		}
+	}
+}
+
+.social-icons-transparent {
+	ul {
+		li {
+			display: inline-block;
+			margin: 0 7px;
+			list-style: none;
+			font-size: 16px;
+			vertical-align: middle;
+			border-radius: 100px;
+			&:first-child {
+				margin-left: 0;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+			a {
+				color: $body-color;
+				height: 40px;
+				width: 40px;
+				display: inline-block;
+				vertical-align: middle;
+				text-align: center;
+				line-height: 38px;
+				color: #ffffff;
+				border-radius: 100px;
+				overflow: hidden;
+				font-size: 14px;
+				border: 1px solid #ffffff;
+				&:hover {
+					color: $theme-color;
+					background: #ffffff;
+					border-color: #ffffff;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,41 @@
+/**
+Why Choose Area
+*/
+
+.why-choose-inner{
+    box-shadow: 0 0 40px rgba(0,0,0,0.08);
+    padding: 100px 0;
+}
+.why-choose{
+    padding: 30px 0;
+    padding-left: 118px;
+    h6{
+        position: relative;
+        letter-spacing: 1px;
+        color: #444444;
+        margin-bottom: 5px;
+        &::before{
+            content: "";
+            position: absolute;
+            right: calc(100% + 15px);
+            width: 45px;
+            height: 1px;
+            background: #bbbbbb;
+            top: 10px;
+        }
+    }
+    p{
+        margin-bottom: 0;
+        color: #666666;
+        font-size: 12px;
+    }
+}
+
+@media #{$xs-layout}{
+    .why-choose-inner{
+        padding: 50px 20px;
+    }
+    .why-choose{
+        padding-left: 80px;
+    }
+}

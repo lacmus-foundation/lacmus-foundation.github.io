@@ -1,0 +1,219 @@
+/**
+Button Styles 
+*/
+
+.cr-btn,
+a.cr-btn,
+button.cr-btn{
+    display: inline-block;
+    background: transparent;
+    font-weight: 700;
+    font-size: 16px;
+    color: #333333;
+    border-width: 1px;
+    border-color: #a8a8a8;
+    border-style: solid;
+    transition: all 0.4s ease-in-out 0s;
+    overflow: hidden;
+    position: relative;
+    height: 46px;
+    line-height: 28px;
+    padding: 7px 35px;
+    vertical-align: middle;
+
+    &:before, &:after{
+        content: "";
+        position: absolute;
+        height: 0;
+        width: 100%;
+        left: 0;
+        background: rgba($theme-color ,0.3);
+        transition: all 0.4s ease-in-out 0s;
+    }
+    &:before{
+        left: 0;
+        top: 0;
+    }
+    &:after{
+        bottom: 0;
+        left: 0;
+    }
+
+    span{
+        position: relative;
+        z-index: 2;
+    }
+
+    &:hover{
+        background: $theme-color;
+        border-color: $theme-color;
+        color: #ffffff;
+        &::before{
+            height: 100%;
+        }
+        &:after{
+            height: 100%;
+        }
+    }
+}
+
+
+a.cr-btn-white,
+button.cr-btn-white,
+.cr-btn-white{
+    border-color: #ffffff;
+    background: #ffffff;
+    &:hover{
+        background: $theme-color;
+        color: #ffffff;
+        border-color: $theme-color;
+    }
+}
+
+a.cr-btn-dark,
+button.cr-btn-dark,
+.cr-btn-dark{
+    border-color: #222222;
+    background: #222222;
+    color: #ffffff;
+    &:hover{
+        background: $theme-color;
+        color: #ffffff;
+        border-color: $theme-color;
+    }
+}
+
+a.cr-btn-transparent,
+button.cr-btn-transparent,
+.cr-btn-transparent{
+    background: transparent;
+    &.cr-btn-white{
+        color: #ffffff;
+    }
+}
+
+a.cr-btn-theme,
+button.cr-btn-theme,
+.cr-btn-theme{
+    background: $theme-color;
+    border-color: $theme-color;
+    color: #ffffff;
+    &:before, &:after{
+        background: rgba(0,0,0,0.15);
+    }
+}
+
+
+/* Button Size Variation */
+a.cr-btn-small,
+button.cr-btn-small,
+.cr-btn-small{
+    padding: 5px 20px;
+    height: 40px;
+    font-size: 14px;
+}
+a.cr-btn-large,
+button.cr-btn-large,
+.cr-btn-large{
+    padding: 12px 45px;
+    height: 56px;
+    font-size: 18px;
+}
+
+
+
+/* Video Button */
+.cr-video-btn{
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    border-radius: 100%;
+    text-align: center;
+    font-size: 20px;
+    position: relative;
+    z-index: 1;
+    i{
+        color: $theme-color;
+        position: relative;
+        z-index: 2;
+        height: 80px;
+        width: 80px;
+        border-radius: 100%;
+        background: #fefaf8;
+        display: inline-block;
+        vertical-align: middle;
+        padding: 30px;
+        transition: all 0.4s ease-in-out 0s;
+    }
+    &::before, &::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 100%;
+        background: rgba(255,255,255,0.4);
+        z-index: -1;
+        animation: crZoomInOutInvisible 1s ease-in-out infinite backwards;
+    }
+    &::after{
+        animation-delay: 0.3s;
+    }
+    &:hover{
+        i{
+            color: #ffffff;
+            background: $theme-color;
+        }
+    }
+
+    &.cr-video-btn-dark{
+        color: #222222;
+        i{
+            color: #222222;
+        }
+        &:hover{
+            i{
+                color: #ffffff;
+            }
+        }
+    }
+
+    &.cr-video-btn-small{
+        width: 60px;
+        height: 60px;
+        i{
+            height: 60px;
+            width: 60px;
+            padding: 20px;
+        }
+    }
+}
+
+
+/* Read More */
+.cr-readmore{
+    display: inline-block;
+    font-weight: 700;
+    font-size: 16px;
+    color: $heading-color;
+    border: none;
+    outline: none;
+    &:hover{
+        color: $theme-color;
+    }
+}
+
+.cr-readmore2{
+    display: inline-block;
+    font-size: 14px;
+    line-height: 28px;
+    color: #333333;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    padding: 0;
+    &:hover{
+        color: $theme-color;
+    }
+}

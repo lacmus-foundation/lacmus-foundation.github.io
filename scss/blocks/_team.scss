@@ -1,0 +1,103 @@
+/**
+Team Styles
+*/
+.team-gallery{
+    margin-top: -80px;
+    .team{
+        margin-top: 80px;
+    }
+}
+.team{
+    margin-top: 60px;
+}
+.team-thumb{
+    border-radius: 1000px;
+    overflow: hidden;
+    border: 5px solid #dddddd;
+    position: relative;
+    &:before{
+        content:"";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(0,0,0,0.7);
+        z-index: 1;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s ease-out 0s;
+    }
+    img{
+        width:100%;
+        transform: scale(1);
+        transition: all 0.4s ease-out 0s;
+        backface-visibility: hidden;
+    }
+    .social-icons{
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        text-align: center;
+        transform: translateY(-50%);
+        z-index: 2;
+        ul{
+            display: inline-block;
+            li{
+                &:first-child{
+                    margin-left: 7px;
+                }
+                &:last-child{
+                    margin-right: 7px;
+                }
+                transform: translateY(25px);
+                opacity: 0;
+                visibility: hidden;
+                transition: 0.4s cubic-bezier(0.86, 0.61, 0.21, 0.43) 0s;
+                @for $i from 0 to 10{
+                    &:nth-child(#{$i}){
+                        transition-delay: 0.15s * $i;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.team-content{
+    padding: 0 15px;
+    margin-top: 30px;
+    h5{
+        font-size: 18px;
+        color: #444444;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+    h6{
+        font-size: 14px;
+        color: #444444;
+        margin-bottom: 0;
+    }
+}
+
+.team:hover{
+    .team-thumb{
+        img{
+            transform: scale(1.2);
+        }
+        &::before{
+            opacity: 1;
+            visibility: visible;
+        }
+        .social-icons{
+            ul{
+                li{
+                    transform: translateY(0);
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

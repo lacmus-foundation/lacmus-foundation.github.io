@@ -1,0 +1,41 @@
+/**
+Call to action styles
+*/
+
+.cta {
+    h2 {
+        display: block;
+        font-size: 40px;
+        letter-spacing: 15px;
+        font-weight: 900;
+        background-image: url(images/onepage/cta-text-color.jpg);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-fill-color: transparent;
+    }
+    .op-btn {
+        margin-top: 30px;
+    }
+}
+
+@media #{$lg-layout} {
+    .cta h2 {
+        font-size: 36px;
+        letter-spacing: 12px;
+    }
+}
+
+@media #{$md-layout} {
+    .cta h2 {
+        font-size: 36px;
+        letter-spacing: 12px;
+    }
+}
+
+@media #{$sm-layout} {
+    .cta h2 {
+        font-size: 32px;
+        letter-spacing: 5px;
+    }
+}

@@ -1,0 +1,30 @@
+/**
+Educationbox Styles
+*/
+
+.educationbox{
+    padding: 40px 30px;
+    background: #f6f6f6;
+    margin-top: 50px;
+    transition: all 0.5s ease-in-out 0s;
+    h5{
+        font-size: 18px;
+        color: #666666;
+        font-weight: 700;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #dddddd;
+    }
+    h6{
+        font-size: 16px;
+        color: #666666;
+        font-weight: 400;
+        padding-top: 10px;
+    }
+    p{
+        margin-bottom: 0;
+    }
+    &:hover{
+        background: #ffffff;
+        box-shadow: 0 0 25px rgba(#a0a0a0, 0.2);
+    }
+}

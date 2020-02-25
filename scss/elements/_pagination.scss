@@ -1,0 +1,72 @@
+/**
+Pagination Styles
+*/
+
+.cr-pagination {
+    ul {
+        padding-left: 0;
+        margin-bottom: 0;
+        padding-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        li {
+            display: inline-block;
+            list-style: none;
+            padding: 0 8px;
+            &:first-child,
+            &:last-child {
+                flex-grow: 100;
+                a {
+                    font-size: 20px;
+                }
+            }
+            &:first-child {
+                padding-left: 0;
+                text-align: left;
+            }
+            &:last-child {
+                padding-right: 0;
+                text-align: right;
+            }
+            a {
+                display: inline-block;
+                height: 37px;
+                width: 37px;
+                border: 1px solid #dddddd;
+                border-radius: 100px;
+                color: #666666;
+                text-align: center;
+                padding: 5px 0;
+                font-weight: 700;
+                font-size: 14px;
+                &:hover {
+                    background: $theme-color;
+                    border-color: $theme-color;
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+}
+
+@media #{$sm-layout} {
+    .cr-pagination ul {
+        padding-top: 25px;
+        li {
+            padding: 0 5px;
+            &:first-child,
+            &:last-child {
+                a {
+                    padding: 2px 0;
+                    font-size: 14px;
+                }
+            }
+            a {
+                height: 30px;
+                width: 30px;
+                padding: 3px 0;
+                font-size: 12px;
+            }
+        }
+    }
+}
