@@ -1,0 +1,69 @@
+/**
+Working Process Styles
+*/
+.working-process-wrap{
+    position: relative;
+    img{
+        width: 100%;
+    }
+}
+.working-processes {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60%;
+    background: #ffffff;
+    padding: 25px 50px;
+    box-shadow: 0 0 70px rgba($theme-color, 0.1);
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.working-process{
+    margin: 35px 0;
+    span{
+        display: inline-block;
+        font-size: 36px;
+        line-height: 50px;
+        color: #999999;
+        font-weight: 700;
+        font-family: $heading-font;
+        vertical-align: middle;
+        margin-right: 10px;
+        margin-bottom: 0;
+    }
+    h6{
+        display: inline-block;
+        font-size: 14px;
+        color: #333333;
+        margin-bottom: 0;
+    }
+    p{
+        color: #666666;
+        margin-bottom: 0;
+    }
+}
+
+@media #{$md-layout}{
+    .working-processes{
+        position: relative;
+        top: inherit;
+        transform: translateY(0);
+        width: 100%;
+    }
+}
+
+@media #{$sm-layout}{
+    .working-processes{
+        position: relative;
+        top: inherit;
+        transform: translateY(0);
+        width: 100%;
+    }
+}
+
+@media #{$xs-layout}{
+    .working-processes{
+        padding: 25px 30px;
+    }
+}

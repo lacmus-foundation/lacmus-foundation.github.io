@@ -1,0 +1,259 @@
+/**
+Typography
+*/
+
+* {
+	box-sizing: border-box;
+}
+
+img {
+	max-width: 100%;
+}
+
+html {
+	overflow: hidden;
+	overflow-y: auto;
+}
+
+body {
+	overflow: hidden;
+	font-size: $body-font-size;
+	line-height: $body-line-height;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: $body-font;
+	color: $body-color;
+	font-weight: 400;
+}
+
+::-webkit-input-placeholder {
+	color: $body-color;
+}
+
+:-moz-placeholder {
+	color: $body-color;
+}
+
+::-moz-placeholder {
+	color: $body-color;
+}
+
+:-ms-input-placeholder {
+	color: $body-color;
+}
+
+a {
+	transition: all 0.4s ease-in-out 0s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+address,
+p,
+pre,
+blockquote,
+dl,
+dd,
+menu,
+ol,
+ul,
+table,
+caption,
+hr {
+	margin: 0;
+	margin-bottom: 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+	font-family: $body-font;
+	line-height: 1.3;
+	color: $heading-color;
+}
+
+h1,
+.h1 {
+	font-size: 60px;
+}
+
+h2,
+.h2 {
+	font-size: 50px;
+}
+
+h3,
+.h3 {
+	font-size: 30px;
+}
+
+h4,
+.h4 {
+	font-size: 24px;
+}
+
+h5,
+.h5 {
+	font-size: 20px;
+}
+
+h6,
+.h6 {
+	font-size: 16px;
+}
+
+@media #{$xlg-layout} {
+	h1,
+	.h1 {
+		font-size: 52px;
+	}
+	h2,
+	.h2 {
+		font-size: 42px;
+	}
+}
+
+@media #{$lg-layout} {
+	h1,
+	.h1 {
+		font-size: 52px;
+	}
+	h2,
+	.h2 {
+		font-size: 42px;
+	}
+}
+
+@media #{$md-layout} {
+	h1,
+	.h1 {
+		font-size: 36px;
+	}
+	h2,
+	.h2 {
+		font-size: 26px;
+	}
+	h3,
+	.h3 {
+		font-size: 20px;
+	}
+}
+
+@media #{$sm-layout} {
+	h1,
+	.h1 {
+		font-size: 32px;
+	}
+	h2,
+	.h2 {
+		font-size: 24px;
+	}
+	h3,
+	.h3 {
+		font-size: 18px;
+	}
+}
+
+h1,
+.h1,
+h2,
+.h2 {
+	font-weight: 700;
+}
+
+h3,
+.h3,
+h4,
+.h4 {
+	font-weight: 600;
+}
+
+h5,
+.h5,
+h6,
+.h6 {
+	font-weight: 500;
+}
+
+a:hover,
+a:focus,
+a:active {
+	text-decoration: none;
+	outline: none;
+}
+
+a:visited {
+	color: inherit;
+}
+
+input,
+button,
+select,
+textarea {
+	background: transparent;
+	border: 1px solid #3d3e43;
+	transition: all 0.4s ease-out 0s;
+	&:focus,
+	&:active {
+		outline: none;
+	}
+}
+
+input,
+select,
+textarea {
+	width: 100%;
+}
+
+input,
+select {
+	height: 45px;
+	padding: 0 20px;
+}
+
+blockquote {
+	color: #333333;
+	font-size: 18px;
+	line-height: 28px;
+	font-style: italic;
+	font-weight: 500;
+	padding: 15px 0;
+	p{
+		color: #333333;
+		font-size: 18px;
+		line-height: 28px;
+		font-style: italic;
+		font-weight: 500;
+		margin-bottom: 0;
+		padding-top: 0;
+		&::before {
+			content: '"';
+			color: #333333;
+			font-size: 24px;
+		}
+		&::after {
+			content: '"';
+			color: #333333;
+			font-size: 24px;
+		}
+	}
+}

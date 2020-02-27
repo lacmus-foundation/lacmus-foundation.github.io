@@ -1,0 +1,364 @@
+/**
+Promobox Styles
+*/
+
+/* Promobox Thumb */
+.promoimage{
+    overflow: hidden;
+    img{
+        width: 100%;
+    }
+}
+.promoimage-animated{
+    & > img{
+        animation: crZoomInOut 20s ease-in-out infinite both;
+    }
+}
+@media #{$lg-layout}{
+    .promoimage{
+        margin: 30px;
+        margin-bottom: 0;
+    }
+}
+@media #{$md-layout}{
+    .promoimage{
+        margin: 30px;
+        margin-bottom: 0;
+    }
+}
+@media #{$sm-layout}{
+    .promoimage{
+        margin: 30px;
+        margin-bottom: 0;
+    }
+}
+@media #{$xs-layout}{
+    .promoimage{
+        margin: 15px;
+        margin-bottom: 0;
+    }
+}
+
+
+
+/* Promobox Content */
+.promocontent{
+    text-align: left;
+    padding: 50px 0;
+    padding-right: 12%;
+    padding-left: 35%;
+    &.promocontent-right{
+        padding-right: 35%;
+        padding-left: 12%;
+    }
+}
+@media #{$xx-layout}{
+    .promocontent{
+        padding-left: 25%;
+        &.promocontent-right{
+            padding-right: 25%;
+        }
+    }
+}
+@media #{$xlg-layout}{
+    .promocontent{
+        padding: 50px 30px;
+        &.promocontent-right{
+            padding: 50px 30px;
+        }
+    }
+}
+@media #{$lg-layout}{
+    .promocontent{
+        padding: 50px 30px;
+        &.promocontent-right{
+            padding: 50px 30px;
+        }
+    }
+}
+@media #{$md-layout}{
+    .promocontent{
+        padding: 30px 30px;
+        &.promocontent-right{
+            padding: 50px 30px;
+        }
+    }
+}
+@media #{$sm-layout}{
+    .promocontent{
+        padding: 30px 30px;
+        &.promocontent-right{
+            padding: 50px 30px;
+        }
+    }
+}
+@media #{$xs-layout}{
+    .promocontent{
+        padding: 30px 15px;
+        &.promocontent-right{
+            padding: 50px 15px;
+        }
+    }
+}
+
+
+
+/* Promocontent 2 */
+.promocontent-2{
+    padding-left: 18%;
+    &.promocontent-right{
+        padding-right: 18%;
+    }
+}
+@media #{$xx-layout}{
+    .promocontent-2{
+        padding-left: 12%;
+        &.promocontent-right{
+            padding-right: 12%;
+        }
+    }
+}
+@media #{$xlg-layout}{
+    .promocontent-2{
+        padding: 50px 30px;
+        &.promocontent-right{
+            padding: 50px 30px;
+        }
+    }
+}
+@media #{$lg-layout}{
+    .promocontent-2{
+        padding: 50px 30px;
+        &.promocontent-right{
+            padding: 50px 30px;
+        }
+    }
+}
+@media #{$md-layout}{
+    .promocontent-2{
+        padding: 50px 30px;
+        &.promocontent-right{
+            padding: 50px 30px;
+        }
+    }
+}
+@media #{$sm-layout}{
+    .promocontent-2{
+        padding: 50px 30px;
+        &.promocontent-right{
+            padding: 50px 30px;
+        }
+    }
+}
+@media #{$xs-layout}{
+    .promocontent-2{
+        padding: 50px 15px;
+        &.promocontent-right{
+            padding: 50px 15px;
+        }
+    }
+}
+
+
+/* Promocontent 3 */
+.promocontent-3{
+    padding: 50px;
+    width: 100%;
+}
+
+@media #{$lg-layout}{
+    .promocontent-3{
+        padding: 30px;
+    }
+}
+
+@media #{$xs-layout}{
+    .promocontent-3{
+        padding: 20px;
+    }
+}
+
+
+
+/* Promocontent 4 */
+.promocontent-4{
+    padding: 50px 24%;
+    .promocontent-right{
+        padding: 50px 24%;
+    }
+}
+@media #{$xx-layout}{
+    .promocontent-4{
+        padding: 50px 10%;
+        .promocontent-right{
+            padding: 50px 10%;
+        }
+    }
+}
+@media #{$xlg-layout}{
+    .promocontent-4{
+        padding: 50px 10%;
+        .promocontent-right{
+            padding: 50px 10%;
+        }
+    }
+}
+@media #{$lg-layout}{
+    .promocontent-4{
+        padding: 50px 30px;
+        .promocontent-right{
+            padding: 50px 30px;
+        }
+    }
+}
+@media #{$md-layout}{
+    .promocontent-4{
+        padding: 50px 30px;
+        .promocontent-right{
+            padding: 50px 30px;
+        }
+    }
+}
+@media #{$sm-layout}{
+    .promocontent-4{
+        padding: 50px 30px;
+        .promocontent-right{
+            padding: 50px 30px;
+        }
+    }
+}
+
+/* Promocontent 5 */
+.promocontent-5{
+    padding: 50px 16.5%;
+}
+@media #{$xx-layout}{
+    .promocontent-5{
+        padding: 50px 10%;
+    }
+}
+@media #{$xlg-layout}{
+    .promocontent-5{
+        padding: 50px 30px;
+    }
+}
+@media #{$lg-layout}{
+    .promocontent-5{
+        padding: 50px 30px;
+    }
+}
+@media #{$md-layout}{
+    .promocontent-5{
+        padding: 50px 30px;
+    }
+}
+@media #{$sm-layout}{
+    .promocontent-5{
+        padding: 50px 30px;
+    }
+}
+
+
+/* Promocontent 6 */
+.promocontent-6{
+    padding-right: 11%;
+    padding-left: 32%;
+    &.promocontent-right{
+        padding-left: 11%;
+        padding-right: 32%;
+    }
+}
+
+@media #{$xlg-layout}{
+    .promocontent-6{
+        padding-right: 30px;
+        padding-left: 30px;
+        &.promocontent-right{
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    } 
+}
+
+@media #{$lg-layout}{
+    .promocontent-6{
+        padding-right: 30px;
+        padding-left: 30px;
+        &.promocontent-right{
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    } 
+}
+
+@media #{$md-layout}{
+    .promocontent-6{
+        padding-right: 30px;
+        padding-left: 30px;
+        &.promocontent-right{
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    } 
+}
+
+@media #{$sm-layout}{
+    .promocontent-6{
+        padding-right: 30px;
+        padding-left: 30px;
+        &.promocontent-right{
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    } 
+}
+
+
+
+/* Promocontent 4 */
+.promocontent-7{
+    padding: 50px 20%;
+    .promocontent-right{
+        padding: 50px 24%;
+    }
+}
+@media #{$xx-layout}{
+    .promocontent-7{
+        padding: 50px 10%;
+        .promocontent-right{
+            padding: 50px 10%;
+        }
+    }
+}
+@media #{$xlg-layout}{
+    .promocontent-7{
+        padding: 50px 10%;
+        .promocontent-right{
+            padding: 50px 10%;
+        }
+    }
+}
+@media #{$lg-layout}{
+    .promocontent-7{
+        padding: 50px 30px;
+        .promocontent-right{
+            padding: 50px 30px;
+        }
+    }
+}
+@media #{$md-layout}{
+    .promocontent-7{
+        padding: 50px 30px;
+        .promocontent-right{
+            padding: 50px 30px;
+        }
+    }
+}
+@media #{$sm-layout}{
+    .promocontent-7{
+        padding: 50px 30px;
+        .promocontent-right{
+            padding: 50px 30px;
+        }
+    }
+}

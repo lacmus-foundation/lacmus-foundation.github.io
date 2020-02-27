@@ -1,0 +1,449 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Lacmus - поиск пропавших людей на фотографиях местности</title>
+	<meta name="description" content="object detection, lacmus, liza alert, retinanet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Favicons -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/icon.png">
+
+	<!-- Google font (font-family: 'Open Sans', sans-serif;) -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400,400i,700,800" rel="stylesheet">
+	<!-- Google font (font-family: 'Poppins', sans-serif;) -->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/plugins.css">
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Cusom css -->
+	<link rel="stylesheet" href="css/custom.css">
+
+	<!-- Modernizer js -->
+	<script src="js/vendor/modernizr-3.5.0.min.js"></script>
+</head>
+
+<body>
+	<!--[if lte IE 9]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+	<![endif]-->
+
+	<!-- Add your site or application content here -->
+
+	<div class="fakeloader"></div>
+
+	<!-- Main wrapper -->
+	<div class="wrapper" id="wrapper">
+
+		<!-- Header Area -->
+		<header id="header" class="header header-transparent sticky-header cr-border-bottom">
+			<div class="container d-none d-lg-block">
+				<div class="header-inner">
+					<a href="index.html" class="logo">
+						<img src="images/logo/lacmus-logo-1.png" alt="logo">
+					</a>
+					<nav class="mainmenu">
+						<ul>
+							<li><a href="https://github.com/lacmus-foundation">GitHub</a></li>
+
+							<li><a href="https://github.com/lacmus-foundation/lacmus/wiki">Wiki</a></li>
+
+							<li class="cr-dropdown"><a href="#contact">Контакты</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<div class="mobile-menu-wrap d-block d-lg-none">
+				<div class="container">
+					<div class="mobile-menu">
+						<a href="index.html" class="mobile-logo">
+							<img src="images/logo/lacmus-logo-96.png" alt="logo">
+						</a>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!--// Header Area -->
+
+		<!-- Banner Area -->
+		<div class="banner-area banner-slider-active-with-navigation slider-navigation-style-2">
+
+			<!-- Single Banner -->
+			<div class="banner bg-image-1 fullscreen jarallax" data-black-overlay="7">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 offset-lg-2 col-md-12 offset-lg-1 col-12 offset-0">
+							<div class="banner-content text-center jarallax cr-tilter">
+								<h1>Lacmus
+									<br> Foundation</h1>
+								<p>Machine learning for social good</p>
+								<a href="https://ods.ai" class="cr-btn cr-btn-white">
+									<span>Присоединиться</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--// Single Banner -->
+
+		</div>
+		<!--// Banner Area -->
+
+		<!-- Start Page Content -->
+		<main class="page-content">
+
+			<!-- About Area -->
+			<section class="cr-section about-area bg-grey">
+				<div class="row no-gutters align-items-center">
+					<div class="col-xl-6 col-12 order-2 order-xl-1">
+						<div class="promocontent about-content">
+							<div class="section-title">
+								<h2>Кто мы такие</h2>
+							</div>
+							<p>Мы, команда проекта Lacmus (#proj_rescuer_la),
+								занимаемся внедрением современных Deep Learning-решений для поиска людей,
+								потерявшихся вне населённой местности: в лесу, поле и т.д.</p>
+							<p>Совместно с поисково-спасательными отрядами мы занимаемся разработкой программы для поиска пропавших людей на снимках, сделанных с БПЛА.
+								Как специалисты по машинному обучению, мы стараемся сделать поиск автоматическим и быстрым.</p>
+							<a href="https://habr.com/ru/company/ods/blog/483616/" class="cr-btn">
+								<span>Узнать больше</span>
+							</a>
+						</div>
+					</div>
+					<div class="col-xl-6 col-12 order-1 order-xl-2">
+						<div class="videobox">
+							<img src="images/promo-image/promo-1.jpg" alt="promo image">
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--// About Area -->
+
+			<!-- Services Area -->
+			<section class="cr-section service-area bg-grey">
+				<div class="row no-gutters align-items-center">
+					<div class="col-xl-6 col-12">
+						<div class="promoimage promoimage-animated">
+							<img src="images/promo-image/promo-2.jpg" alt="promo image">
+						</div>
+					</div>
+					<div class="col-xl-6 col-12">
+						<div class="promocontent promocontent-right">
+							<div class="section-title">
+								<h2>Что мы делаем</h2>
+							</div>
+							<div class="services">
+								<div class="service">
+									<div class="service-content">
+										<h6>Собираем данные</h6>
+										<p>Совместно с поисковыми отрядами мы собираем реальные снимки,
+											размечаем их и собираем в датасеты.</p>
+									</div>
+								</div>
+								<div class="service">
+									<div class="service-content">
+										<h6>Обучаем нейросети</h6>
+										<p>Мы используем современные алгоритмы глубокого обучения для получения самых точных результатов.</p>
+									</div>
+								</div>
+								<div class="service">
+									<div class="service-content">
+										<h6>Оптимизируем модели</h6>
+										<p>Решения, попадающие в продакшн, оптимизируются для достижения максимального быстродействия.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!--// Services Area -->
+
+			<!-- Portfolio Area -->
+			<section class="cr-section portfolio-area bg-white section-padding-lg">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-6 offset-lg-3">
+							<div class="section-title text-center">
+								<h2>Результаты распознавания</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<!-- Portfolios -->
+				<div class="row no-gutters portfolios mt-5">
+
+					<!-- Single Portfolio -->
+					<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 portfolio-single pfolio-filter-branding pfolio-filter-product-design">
+						<div class="portfolio">
+							<div class="portfolio-thumb">
+								<img src="images/portfolio/01.jpg" alt="portfolio thumb">
+							</div>
+						</div>
+					</div>
+					<!--// Single Portfolio -->
+
+					<!-- Single Portfolio -->
+					<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 portfolio-single pfolio-filter-branding pfolio-filter-product-design">
+						<div class="portfolio">
+							<div class="portfolio-thumb">
+								<img src="images/portfolio/02.jpg" alt="portfolio thumb">
+							</div>
+						</div>
+					</div>
+					<!--// Single Portfolio -->
+
+					<!-- Single Portfolio -->
+					<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 portfolio-single pfolio-filter-branding pfolio-filter-product-design">
+						<div class="portfolio">
+							<div class="portfolio-thumb">
+								<img src="images/portfolio/03.jpg" alt="portfolio thumb">
+							</div>
+						</div>
+					</div>
+					<!--// Single Portfolio -->
+
+					<!-- Single Portfolio -->
+					<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 portfolio-single pfolio-filter-branding pfolio-filter-product-design">
+						<div class="portfolio">
+							<div class="portfolio-thumb">
+								<img src="images/portfolio/04.jpg" alt="portfolio thumb">
+							</div>
+						</div>
+					</div>
+					<!--// Single Portfolio -->
+
+					<!-- Single Portfolio -->
+					<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 portfolio-single pfolio-filter-branding pfolio-filter-product-design">
+						<div class="portfolio">
+							<div class="portfolio-thumb">
+								<img src="images/portfolio/05.jpg" alt="portfolio thumb">
+							</div>
+						</div>
+					</div>
+					<!--// Single Portfolio -->
+
+					<!-- Single Portfolio -->
+					<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 portfolio-single pfolio-filter-branding pfolio-filter-product-design">
+						<div class="portfolio">
+							<div class="portfolio-thumb">
+								<img src="images/portfolio/06.jpg" alt="portfolio thumb">
+							</div>
+						</div>
+					</div>
+					<!--// Single Portfolio -->
+
+					<!-- Single Portfolio -->
+					<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 portfolio-single pfolio-filter-branding pfolio-filter-product-design">
+						<div class="portfolio">
+							<div class="portfolio-thumb">
+								<img src="images/portfolio/07.jpg" alt="portfolio thumb">
+							</div>
+						</div>
+					</div>
+					<!--// Single Portfolio -->
+
+					<!-- Single Portfolio -->
+					<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 portfolio-single pfolio-filter-branding pfolio-filter-product-design">
+						<div class="portfolio">
+							<div class="portfolio-thumb">
+								<img src="images/portfolio/08.jpg" alt="portfolio thumb">
+							</div>
+						</div>
+					</div>
+					<!--// Single Portfolio -->
+
+				</div>
+				<!--// Portfolios -->
+
+			</section>
+			<!--// Portfolio Area -->
+
+
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-6 offset-lg-3">
+						<div class="section-title text-center">
+							<h2>Наша команда</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			            <!-- Team Member -->
+			            <section class="cr-section team-member-area section-padding-xlg bg-white">
+			                <div class="container">
+			                    <div class="row justify-content-center team-gallery">
+
+			                        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+																	<!-- Single Team -->
+			                            <div class="team">
+			                                <div class="team-thumb">
+			                                    <img src="images/team/gosha.jpg" alt="team thumb">
+			                                </div>
+			                                <div class="team-content text-center">
+			                                    <h5>Перевозчиков Георгий</h5>
+			                                    <h6>Team Lead</h6>
+			                                </div>
+			                            </div>
+			                            <!--// Single Team -->
+			                        </div>
+
+															<div class="col-lg-3 col-md-6 col-sm-6 col-12">
+																	<!-- Single Team -->
+			                            <div class="team">
+			                                <div class="team-thumb">
+			                                    <img src="images/team/ei-grad.jpg" alt="team thumb">
+			                                </div>
+			                                <div class="team-content text-center">
+			                                    <h5>Григорьев Андрей</h5>
+			                                    <h6>Backend, Data Scientist</h6>
+			                                </div>
+			                            </div>
+			                            <!--// Single Team -->
+			                        </div>
+
+															<div class="col-lg-3 col-md-6 col-sm-6 col-12">
+																	<!-- Single Team -->
+			                            <div class="team">
+			                                <div class="team-thumb">
+			                                    <img src="images/team/ksenia.jpg" alt="team thumb">
+			                                </div>
+			                                <div class="team-content text-center">
+			                                    <h5>Терехова Ксения</h5>
+			                                    <h6>Data Scientist</h6>
+			                                </div>
+			                            </div>
+			                            <!--// Single Team -->
+			                        </div>
+
+															<div class="col-lg-3 col-md-6 col-sm-6 col-12">
+																	<!-- Single Team -->
+			                            <div class="team">
+			                                <div class="team-thumb">
+			                                    <img src="images/team/balezz.jpg" alt="team thumb">
+			                                </div>
+			                                <div class="team-content text-center">
+			                                    <h5>Лабинцев Андрей</h5>
+			                                    <h6>Data Scientist</h6>
+			                                </div>
+			                            </div>
+			                            <!--// Single Team -->
+			                        </div>
+
+			                    </div>
+			                </div>
+			            </section>
+			            <!--// Team Member -->
+
+
+		</main>
+		<!--// Start Page Content -->
+
+		<!-- Footer Area -->
+		<footer class="footer-area">
+  <p><a name="contact"></a></p>
+			<!-- Footer Widgets Area -->
+			<div class="bg-footer-1 jarallax section-padding-xs" data-black-overlay="7">
+				<div class="container">
+					<div class="row widgets footer-widgets">
+
+						<!-- Single Widget -->
+						<div class="col-lg-3 col-md-6">
+							<!-- Widget About -->
+							<div class="single-widget about-widget">
+								<h4 class="widget-title">Контакты</h4>
+								<ul>
+									<li>
+										<i class="fa fa-map-marker"></i>
+										<p>Россия, Москва</p>
+									</li>
+									<li>
+										<i class="fa fa-phone"></i>
+										<p>Phone :
+											<a href="tel:++79771390024">+7 977 139 0024</a>
+										</p>
+									</li>
+									<li>
+										<i class="fa fa-envelope"></i>
+										<p>Email :
+											<a href="gosha20777@live.ru">gosha20777@live.ru</a>,</p>
+									</li>
+									<li>
+										<div class="social-icons">
+											<ul>
+												<li class="facebook">
+													<a href="https://facebook.com">
+														<i class="fa fa-facebook"></i>
+													</a>
+												</li>
+												<li class="twitter">
+													<a href="https://twitter.com">
+														<i class="fa fa-twitter"></i>
+													</a>
+												</li>
+												<li class="google-plus">
+													<a href="https://plus.google.com">
+														<i class="fa fa-google-plus"></i>
+													</a>
+												</li>
+												<li class="linkedin">
+													<a href="https://linkedin.com">
+														<i class="fa fa-linkedin"></i>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<!--// Widget About -->
+						</div>
+						<!--// Single Widget -->
+
+
+					</div>
+				</div>
+			</div>
+			<!--// Footer Widgets Area -->
+
+			<!-- Footer Copyright Area -->
+			<div class="footer-copyright-area">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="copyright text-center">
+								<p>Copyright &copy; 2020
+									<a href="https://freethemescloud.com/"> Free themes Cloud</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--// Footer Copyright Area -->
+
+		</footer>
+		<!--// Footer Area -->
+
+	</div>
+	<!-- //Main wrapper -->
+
+	<!-- JS Files -->
+	<script src="js/vendor/jquery-3.2.1.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/plugins.js"></script>
+	<script src="js/active.js"></script>
+	<script src="js/scripts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+/**
+Widget Styles
+*/
+
+.widgets:not(.footer-widgets){
+    .single-widget{
+        ul{
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style: none;
+            li{
+                list-style: none;
+            }
+        }
+    }
+}

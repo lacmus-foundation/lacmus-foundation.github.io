@@ -1,0 +1,93 @@
+/*********************************************************************************
+
+	Template Name: Fixco - Multipurpose Bootstrap4 Template  
+	Template URI: https://themeforest.net/user/devitems
+	Description: Fixco is aesthetically well organized multipurpose. Comes with 6+ homepages available with multi style that easily modifiable one to another.
+	Author: Devitems
+	Author URI: https://devitems.com/
+	Version: 1.0.1
+
+	Note: This is style css.
+
+**********************************************************************************/
+
+
+
+
+// Needed Files
+@import 'variables';
+@import 'mixins';
+
+
+
+/*******************
+Basic Styles
+********************/
+@import 'basic/reset';
+@import 'basic/typography';
+@import 'basic/helper-class';
+
+
+
+
+/*******************
+Elements Styles
+********************/
+@import 'elements/animations';
+@import 'elements/button';
+@import 'elements/section-title';
+@import 'elements/progress';
+@import 'elements/slider-elements';
+@import 'elements/social-icons';
+@import 'elements/accordion';
+@import 'elements/videobox';
+@import 'elements/breadcrumb';
+@import 'elements/pagination';
+@import 'elements/call-to-action';
+
+
+
+
+/*******************
+Blocks Styles
+********************/
+@import 'blocks/header';
+@import 'blocks/navigation';
+@import 'blocks/banner';
+@import 'blocks/promobox';
+@import 'blocks/about';
+@import 'blocks/service';
+@import 'blocks/features';
+@import 'blocks/countbox';
+@import 'blocks/portfolio';
+@import 'blocks/skill';
+@import 'blocks/funfact';
+@import 'blocks/testimonial';
+@import 'blocks/team';
+@import 'blocks/blog';
+@import 'blocks/imagebox';
+@import 'blocks/faq';
+@import 'blocks/why-choose';
+@import 'blocks/experiencebox';
+@import 'blocks/educationbox';
+@import 'blocks/model';
+@import 'blocks/contact';
+@import 'blocks/working-process';
+@import 'blocks/widgets';
+@import 'blocks/brand-logo';
+@import 'blocks/sidebar';
+@import 'blocks/pg-portfolio';
+@import 'blocks/pg-blog';
+@import 'blocks/blog-details';
+@import 'blocks/comment';
+@import 'blocks/contact-me';
+@import 'blocks/contact-us';
+@import 'blocks/footer';
+
+
+
+/*******************
+Pages Styles
+********************/
+@import 'pages/onepage';
+

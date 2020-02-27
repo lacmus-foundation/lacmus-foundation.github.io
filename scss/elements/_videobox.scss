@@ -1,0 +1,73 @@
+/**
+Videobox Styles
+*/
+.videobox{
+    overflow: hidden;
+    position: relative;
+    img{
+        width: 100%;
+        z-index: 1;
+        position: relative;
+    }
+
+    & > .cr-video-btn{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -40px;
+        margin-top: -40px;
+        z-index: 3;
+    }
+}
+.videobox-animated{
+    & > img{
+        animation: crZoomInOut 20s ease-in-out infinite both;
+    }
+}
+@media #{$lg-layout}{
+    .videobox.videobox-2{
+        margin: 30px 0;
+    }
+}
+@media #{$lg-layout}{
+    .videobox{
+        margin: 30px;
+        margin-bottom: 0;
+        &.videobox-2{
+            margin: 30px 0;
+        }
+    }
+}
+
+@media #{$md-layout}{
+    .videobox{
+        margin: 30px;
+        margin-bottom: 0;
+        &.videobox-2{
+            margin: 30px 0;
+            margin-top: 0;
+        }
+    }
+}
+
+@media #{$sm-layout}{
+    .videobox{
+        margin: 30px;
+        margin-bottom: 0;
+        &.videobox-2{
+            margin: 30px 0;
+            margin-top: 0;
+        }
+    }
+}
+
+@media #{$xs-layout}{
+    .videobox{
+        margin: 15px;
+        margin-bottom: 0;
+        &.videobox-2{
+            margin: 30px 0;
+            margin-top: 0;
+        }
+    }
+}

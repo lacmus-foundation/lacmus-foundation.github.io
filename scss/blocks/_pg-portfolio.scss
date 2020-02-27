@@ -1,0 +1,92 @@
+/**
+Portfolio Details Styles
+*/
+
+.pg-portfolio-content{
+    margin-top: 95px;
+    blockquote{
+        width: 65%;
+        display: inline-block;
+    }
+    & > p{
+        line-height: 28px;
+        font-size: 14px;
+        color: #666666;
+    }
+}
+
+.pg-portfolio-details{
+    margin-top: 95px;
+}
+.pg-portfolio-details-box{
+    margin-top: 25px;
+    border: 1px solid #dddddd;
+    padding: 50px 75px;
+    display: inline-block;
+    & > ul{
+        text-align: left;
+        padding-left: 0;
+        margin-bottom: 0;
+        padding-bottom: 45px;
+        li{
+            @include clearfix();
+            display: block;
+            padding: 10px 20px;
+            border-bottom: 1px solid #dddddd;
+            a{
+                color: #666666;
+                &:hover{
+                    color: $theme-color;
+                }
+            }
+            &:first-child{
+                padding-top: 0;
+            }
+            &:last-child{
+                padding-bottom: 0;
+                border-bottom: none;
+            }
+            span{
+                float: right;
+            }
+        }
+    }
+}
+.pg-portfolio-details-social{
+    padding: 0 25px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    .social-icons{
+        padding-left: 20px;
+        margin-bottom: 15px;
+    }
+    h6{
+        margin-bottom: 15px;
+    }
+}
+
+@media #{$md-layout}{
+    .pg-portfolio-content blockquote{
+        width: 85%;
+    }
+}
+
+@media #{$sm-layout}{
+    .pg-portfolio-content blockquote{
+        width: 85%;
+    }
+}
+
+@media #{$xs-layout}{
+    .pg-portfolio-content blockquote{
+        width: 100%;
+    }
+    .pg-portfolio-details-box{
+        padding: 30px 10px;
+    }
+    .pg-portfolio-details-social .social-icons{
+        padding-left: 0;
+    }
+}

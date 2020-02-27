@@ -1,0 +1,49 @@
+/**
+Countbox Styles
+*/
+
+.countboxes{
+    margin-top: -30px;
+    counter-reset: section;
+}
+.countbox{
+    padding: 20px 40px 55px 40px;
+    position: relative;
+    margin-top: 30px;
+    transition: all 0.4s ease-in-out 0s;
+    &::before{
+        counter-increment: section;
+        content:counter(section)".";
+        font-weight: 700;
+        font-family: $heading-font;
+        font-size: 56px;
+        line-height: 80px;
+        color: $theme-color;
+        position: relative;
+    }
+    h6{
+        margin-top: 8px;
+        color: $heading-color;
+        letter-spacing: 1px;
+    }
+    &:hover{
+        box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.bg-white{
+    .countbox{
+        background: #f6f6f6;
+    }
+}
+.bg-grey{
+    .countbox{
+        background: #ffffff;
+    }
+}
+
+@media #{$lg-layout}{
+    .countbox{
+        padding: 20px 20px 55px 20px;
+    }
+}

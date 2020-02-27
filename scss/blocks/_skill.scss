@@ -1,0 +1,81 @@
+/**
+Skill Area Styles
+*/
+.skills-area-content-wrap {
+    display: flex;
+    align-items: center;
+    box-shadow: -11px 20px 20px 20px rgba(158, 158, 158, 0.1);
+}
+
+.skill-thumb {
+    img {
+        width: 100%;
+    }
+}
+
+/* Skills style 2 */
+
+.progressbox {
+    display: flex;
+    flex-wrap: wrap;
+    height: 410px;
+    width: 410px;
+    position: relative;
+    margin: 50px auto;
+    &::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 1px;
+        background: #ffffff;
+        left: 50%;
+        top: 0;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        background: #ffffff;
+        left: 0;
+        top: 50%;
+    }
+    .progresscount {
+        flex: 0 0 50%;
+        text-align: center;
+        h3{
+            color: #ffffff;
+        }
+        p{
+            margin-bottom: 0;
+            color: #ffffff;
+        }
+        &:nth-child(1){
+            position: absolute;
+            right: calc(50% + 30px);
+            bottom: calc(50% + 25px);
+        }
+        &:nth-child(2){
+            position: absolute;
+            left: calc(50% + 30px);
+            bottom: calc(50% + 25px);
+        }
+        &:nth-child(3){
+            position: absolute;
+            right: calc(50% + 30px);
+            top: calc(50% + 25px);
+        }
+        &:nth-child(4){
+            position: absolute;
+            left: calc(50% + 30px);
+            top: calc(50% + 25px);
+        }
+    }
+}
+.progressbox-wrap{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+}
