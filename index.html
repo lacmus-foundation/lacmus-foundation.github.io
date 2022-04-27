@@ -1,521 +1,572 @@
-<!doctype html>
-<html class="no-js" lang="zxx">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>Lacmus - searching for lost people in search & rescue operations</title>
-	<meta name="description" content="object detection, lacmus, liza alert, retinanet">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<!-- Favicons -->
-	<link rel="shortcut icon" href="images/favicon.ico">
-	<link rel="apple-touch-icon" href="images/icon.png">
-
-	<!-- Google font (font-family: 'Open Sans', sans-serif;) -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400,400i,700,800" rel="stylesheet">
-	<!-- Google font (font-family: 'Poppins', sans-serif;) -->
-	<link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700" rel="stylesheet">
-
-	<!-- Stylesheets -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/plugins.css">
-	<link rel="stylesheet" href="style.css">
-
-	<!-- Cusom css -->
-	<link rel="stylesheet" href="css/custom.css">
-
-	<!-- Modernizer js -->
-	<script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');
+    </style>
+    <title>Lacmus Foundation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/Logo.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/Logo.svg">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/Logo.svg">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/Logo.svg" />
+    <link rel="mask-icon" href="assets/Logo.svg" color="#161c2d">
+    <meta name="msapplication-config" content="favicons/browserconfig.xml" />
+    <meta name="msapplication-TileColor" content="#161c2d">
+    <meta name="theme-color" content="#161c2d">
+    <meta name="description" content="Your App, Everywhere.">
 </head>
 
-<body>
-	<!--[if lte IE 9]>
-		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-	<![endif]-->
+<body class="av-bg-dark text-light home">
 
-	<!-- Add your site or application content here -->
+    <div class="container-fluid px-0 fixed-top">
+        <nav class="navbar navbar-expand-xl navbar-dark py-3 av-bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="https://lacmus-foundation.github.io/">
+                    <img src="assets/Logo.svg" alt="Avalonia Logo" width="30" height="30" class="d-inline-block align-text-top">
+                    Lacmus Foundation
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav mx-md-auto">
+                        <a class="nav-link px-2 px-xl-5 active" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link px-2 px-xl-5" href="https://github.com/lacmus-foundation/lacmus-app/releases">Application</a>
+                        <a class="nav-link px-2 px-xl-5" href="https://docs.lacmus.ml/">Documentation</a>
+                    </div>
 
-	<div class="fakeloader"></div>
+                    <div class="float-xl-end pb-3 pb-xl-0">
+                        <a class="btn btn-primary mt-2 mt-xl-0 me-2 px-4" href="https://t.me/found_lacmus" target="_blank"
+                           role="button">
+                            <img src="assets/telegram-light.svg" class="me-2 color-white" style="width: 17px; height: 17px; position: relative; top: -1px" alt="Telegram"/>
+                            Telegram
+                        </a>
 
-	<!-- Main wrapper -->
-	<div class="wrapper" id="wrapper">
+                        <a class="btn btn-primary mt-2 mt-xl-0" href="https://github.com/lacmus-foundation" target="_blank"
+                            role="button">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-1">
+                                        <img src="assets/gh-social-light.svg" alt="Github Logo"/>
+                                    </div>
+                                    <div class="col">Source Code</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
 
-		<!-- Header Area -->
-		<header id="header" class="header header-transparent sticky-header cr-border-bottom">
-			<div class="container d-none d-lg-block">
-				<div class="header-inner">
-					<a href="index.html" class="logo">
-						<img src="images/logo/lacmus-logo-1.png" alt="logo">
-					</a>
-					<nav class="mainmenu">
-						<ul>
-							<li><a href="https://github.com/lacmus-foundation">GitHub</a></li>
+    <div class="container"></div>
 
-							<li><a href="https://github.com/lacmus-foundation/lacmus/wiki">Wiki</a></li>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-9 mx-auto mt-5">
+                <div class="p-4 text-center mt-md-3">
+                    <h1>Search for Missing People.</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6  mx-auto text-center">
+                <h4 class="mb-5">Machine learning for social goods.</h4>                
+            </div>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="d-flex justify-content-center col-sm-8 col-md-7 col-lg-5 col-xl-4 text-center intro-logotype">
+                <div class="col">
+                    <img src="assets/windows-brand.svg" alt="Windows Logo" />
+                </div>
+                <div class="col">
+                    <img src="assets/MacOS_logo.svg" alt="macOS Logo" />
+                </div>
+                <div class="col">
+                    <img src="assets/linux-brand.svg" alt="Linux Logo" />
+                </div>
+                <div class="col">
+                    <img src="assets/www.svg" alt="WWW Logo" />
+                </div>
+                <div class="col">
+                    <img src="assets/ftp.svg" alt="FTP Logo" />
+                </div>
+            </div>
+        </div>
+    </div>
 
-							<li class="cr-dropdown"><a href="#contact">Contacts</a></li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-			<div class="mobile-menu-wrap d-block d-lg-none">
-				<div class="container">
-					<div class="mobile-menu">
-						<a href="index.html" class="mobile-logo">
-							<img src="images/logo/lacmus-logo-96.png" alt="logo">
-						</a>
-					</div>
-				</div>
-			</div>
-		</header>
-		<!--// Header Area -->
+    <div class="row justify-content-center mt-5">
+        <div class="d-flex justify-content-center col-sm-8 col-md-7 col-lg-5 col-xl-4 text-center intro-logotype">
+            <a class="btn btn-primary mt-8 mt-xl-8 me-8 px-4" href="https://github.com/lacmus-foundation/lacmus-app/releases" target="_blank"
+                role="button">
+                <img src="assets/download.svg" class="me-2 color-white" style="width: 22px; height: 22px; position: relative; top: -2px" alt="Telegram"/>
+                Download App
+            </a>
+        </div>
+    </div>
 
-		<!-- Banner Area -->
-		<div class="banner-area banner-slider-active-with-navigation slider-navigation-style-2">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-sm-8 mx-auto text-center">
 
-			<!-- Single Banner -->
-			<div class="banner bg-image-1 fullscreen jarallax" data-black-overlay="7">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-8 offset-lg-2 col-md-12 offset-lg-1 col-12 offset-0">
-							<div class="banner-content text-center jarallax cr-tilter">
-								<h1>Lacmus
-									<br> Foundation</h1>
-								<p>Machine learning for social good</p>
-								<a href="https://ods.ai" class="cr-btn cr-btn-white">
-									<span>Join</span>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!--// Single Banner -->
+                <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="assets/bg0.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/bg1.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/bg2.png" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
 
-		</div>
-		<!--// Banner Area -->
+            </div>
+        </div>
+    </div>
 
-		<!-- Start Page Content -->
-		<main class="page-content">
+    <div class="container-fluid px-0">
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col text-center">
+                    <h6>Trusted by</h6>
+                </div>
+            </div>
+            <div class="row justify-content-evenly mt-3 text-center">
+                <div class="col-md-4 col-sm-3">
+                    <a href="https://ods.ai/" target="_blank">
+                        <img height="32" src="assets/ods_logo.svg" alt="ODS Logo" />
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-3 mt-3 mt-sm-0">
+                    <a href="https://www.jetbrains.com/" target="_blank">
+                        <img height="32" src="assets/jb.svg" alt="Jetbrains Logo" />
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-3 mt-3 mt-sm-0">
+                    <a href="http://immersiya.com/" target="_blank">
+                        <img height="32" src="assets/dtl.svg" alt="DTL Logo" />
+                    </a>
+                </div>
+            </div>
+            <div class="row justify-content-evenly mt-3 text-center">
+                <div class="col-md-4 col-sm-3">
+                    <a href="https://www.gitbook.com/" target="_blank">
+                        <img height="32" src="assets/gitbook.svg" alt="Git Book Logo" />
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-3 mt-3 mt-sm-0">
+                    <a href="https://novayagazeta.ru/" target="_blank">
+                        <img height="32" src="assets/novaya.svg" alt="Novaya Gazeta Logo" />
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-3 mt-3 mt-sm-0">
+                    <a href="https://te-st.ru/" target="_blank">
+                        <img height="32" src="assets/teplica-logo-128px.jpeg" alt="Teplica Logo" />
+                    </a>
+                </div>
+            </div>
+            <div class="row justify-content-evenly mt-3 text-center">
+                <div class="col-md-4 col-sm-3">
+                    <a href="https://lizaalert.org/" target="_blank">
+                        <img height="32" src="assets/la-logo.png" alt="lizaalert Logo" />
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-3 mt-3 mt-sm-0">
+                    <a href="https://angel-search.by/" target="_blank">
+                        <img height="32" src="assets/angel.png" alt="angel Logo" />
+                    </a>
+                </div>
+                <div class="col-md-4 col-sm-3">
+                    <a href="https://poisktver.ru/" target="_blank">
+                        <img height="32" src="assets/sssv.svg" alt="Sova Logo" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-			<!-- About Area -->
-			<section class="cr-section about-area bg-grey">
-				<div class="row no-gutters align-items-center">
-					<div class="col-xl-6 col-12 order-2 order-xl-1">
-						<div class="promocontent about-content">
-							<div class="section-title">
-								<h2>Who we are</h2>
-							</div>
-							<p>We, team of Lacmus project, are developing and providing assistance in deployment of modern Deep Learning solutions intended for supporting search-and-rescue operations aimed at people lost in uninhabited terrain (fields, forests, etc.) </p>
-							<p> In collaboration with search and rescue volunteer groups we're developing software to help teams finding people on UAV (unmanned autonomous vehicles, or simply drones) photos.
-							As machine learning professionals we're trying to do the search process as automated and fast as possible.
-							</p>
-							<a href="https://habr.com/ru/company/ods/blog/483616/" class="cr-btn">
-								<span>find out more (in Russian)</span>
-							</a>
-						</div>
-					</div>
-					<div class="col-xl-6 col-12 order-1 order-xl-2">
-						<div class="videobox">
-							<img src="images/promo-image/promo-1.jpg" alt="promo image">
-						</div>
-					</div>
-				</div>
-			</section>
-			<!--// About Area -->
+    <div class="container-fluid px-0">
+        <div class="relative pb-5">
+            <div class="background-container bg-home">
+                <div class="background curve av-bg-dark" style="z-index: 1;"></div>
+            </div>
+        </div>
+    </div>
 
-			<!-- Services Area -->
-			<section class="cr-section service-area bg-grey">
-				<div class="row no-gutters align-items-center">
-					<div class="col-xl-6 col-12">
-						<div class="promoimage promoimage-animated">
-							<img src="images/promo-image/promo-2.jpg" alt="promo image">
-						</div>
-					</div>
-					<div class="col-xl-6 col-12">
-						<div class="promocontent promocontent-right">
-							<div class="section-title">
-								<h2>What are we doing</h2>
-							</div>
-							<div class="services">
-								<div class="service">
-									<div class="service-content">
-										<h6>Gathering data</h6>
-										<p>In coordination with S&R teams we’re gathering photos, labeling them, and collecting into datasets.</p>
-									</div>
-								</div>
-								<div class="service">
-									<div class="service-content">
-										<h6>Training neural networks</h6>
-										<p>We're using state-of the art deep-learning models and algorithms to achieve the best results possible.</p>
-									</div>
-								</div>
-								<div class="service">
-									<div class="service-content">
-										<h6>Optimizing models</h6>
-										<p>Solutions delivered to field operation are further optimized to achieve the best speed.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!--// Services Area -->
+    <div class="container-fluid px-0 bg-home">
+        <div class="container-fluid">
+            <div class="container mt-5 pt-5">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="text-center">
+                            <h2>Anout us.</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-7 mx-auto text-center">
+                        <h4><b>Lacmus Foundation</b> - it is open-source non-profit organization engaged in the search and rescue for missing people using computer vision and neural networks.</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-			<!-- Portfolio Area -->
-			<section class="cr-section portfolio-area bg-white section-padding-lg">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-6 offset-lg-3">
-							<div class="section-title text-center">
-								<h2>Results of detection</h2>
-							</div>
-						</div>
-					</div>
-				</div>
+        <div class="container">
+            <div class="d-flex justify-content-center flex-wrap">
+                <div class="card mt-5">
+                    <div class="card-body d-flex flex-column">
+                        <img class="img-fluid mt-3 ms-3" src="assets/GitHub.svg" width="92" height="92" alt="Github Logo" />
+                        <div class="mt-auto ms-3 mb-3">
+                            <h6 class="card-title">Open Source</h6>
+                            <p class="card-text">All our software is completely open source, free to use and always will be.</p>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="card mx-md-5 mt-5">
+                    <div class="card-body d-flex flex-column">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-3">
+                                    <img src="assets/windows-brand.svg" alt="Windows Logo" />
+                                </div>
+                                <div class="col-3">
+                                    <img src="assets/MacOS_logo.svg" alt="macOS Logo" />
+                                </div>
+                                <div class="col-3">
+                                    <img src="assets/linux-brand.svg" alt="Linux Logo" />
+                                </div>
+                                <div class="col-3">
+                                    <img src="assets/ftp.svg" alt="FTP Logo" />
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-3">
+                                    <img src="assets/WebAssembly_Logo.svg" alt="webassembly" />
+                                </div>
+                                <div class="col-3">
+                                    <img src="assets/www.svg" alt="WWW Logo" />
+                                </div>
+                                <div class="col-3">
+                                    <img src="assets/android.svg" alt="Android Logo" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-auto ms-3 mb-3">
+                            <h6 class="card-title">Cross Platform</h6>
+                            <p class="card-text card-caption">You can choose for yourself the best way to use lacmus (desktop, mobile, web, ftp).</p>
+                            <p class="card-text card-small-print">* Mobile support is in public preview.</p>
+                        </div>
+                    </div>
+                </div>
 
-				<!-- Portfolios -->
-				<div class="row no-gutters portfolios mt-5">
+                <div class="card mt-5">
+                    <div class="card-body d-flex flex-column">
+                        <img class="img-fluid mt-3 ms-3" src="assets/Help.svg" width="92" height="92" alt="Support Icon" />
+                        <div class="mt-auto ms-3 mb-3">
+                            <h6 class="card-title">Community Support</h6>
+                            <p class="card-text">Join to Lacmus friendly community where you'll find lots of people happy to help you!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-					<!-- Single Portfolio -->
-					<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 portfolio-single pfolio-filter-branding pfolio-filter-product-design">
-						<div class="portfolio">
-							<div class="portfolio-thumb">
-								<img src="images/portfolio/01.jpg" alt="portfolio thumb">
-							</div>
-						</div>
-					</div>
-					<!--// Single Portfolio -->
+        <div class="container mt-5 pt-5">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-6">
+                    <div class="text-left">
+                        <h2 class="mb-3">Who we are?</h2>
+                        <h4 class="mb-3">We, team of <b>Lacmus</b> project, are developing and providing assistance in deployment of modern <b>Deep Learning solutions</b> intended for supporting <b>search-and-rescue</b> operations aimed at people lost in uninhabited terrain (fields, forests, etc.).</h4>
+                        <h4 class="mb-3"><b>In collaboration with S&R groups</b> we're developing software to help teams finding people on <b>UAV</b> (unmanned autonomous vehicles, or simply drones) photos. As machine learning professionals we're trying to <b>do the search process as fast as possible</b>.</h4>
+                    </div>
+                </div>
 
-					<!-- Single Portfolio -->
-					<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 portfolio-single pfolio-filter-branding pfolio-filter-product-design">
-						<div class="portfolio">
-							<div class="portfolio-thumb">
-								<img src="images/portfolio/02.jpg" alt="portfolio thumb">
-							</div>
-						</div>
-					</div>
-					<!--// Single Portfolio -->
+                <div class="d-lg-block col">
+                    <img class="img-fluid float-end" src="assets/lacmus-bg1.png" alt="Lacmus"/>
+                </div>
+            </div>
 
-					<!-- Single Portfolio -->
-					<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 portfolio-single pfolio-filter-branding pfolio-filter-product-design">
-						<div class="portfolio">
-							<div class="portfolio-thumb">
-								<img src="images/portfolio/03.jpg" alt="portfolio thumb">
-							</div>
-						</div>
-					</div>
-					<!--// Single Portfolio -->
+            <div class="row align-items-center mt-5 ">
+                <div class="col-12 col-md-6 order-md-1">
+                    <div class="text-left">
+                        <h2 class="mb-3">What we are doing?</h2>
+                        <h4 class="mb-3"><b>Gathering data.</b> In coordination with S&R teams we’re gathering photos, labeling them, and collecting into datasets.</h4>
+                        <h4 class="mb-3"><b>Training neural networks.</b> We're using state-of the art deep-learning models and algorithms to achieve the best results possible.</h4>
+                        <h4 class="mb-3"><b>Creating software.</b> Solutions delivered to field operation are further optimized to achieve the best speed and user experience.</h4>
+                    </div>
+                </div>
 
-					<!-- Single Portfolio -->
-					<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 portfolio-single pfolio-filter-branding pfolio-filter-product-design">
-						<div class="portfolio">
-							<div class="portfolio-thumb">
-								<img src="images/portfolio/04.jpg" alt="portfolio thumb">
-							</div>
-						</div>
-					</div>
-					<!--// Single Portfolio -->
+                <div class="d-lg-block col order-md-0">
+                    <img class="img-fluid float-start" src="assets/lacmus-bg2.png" alt="Lacmys dev" />
+                </div>
+            </div>
+        </div>
 
-					<!-- Single Portfolio -->
-					<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 portfolio-single pfolio-filter-branding pfolio-filter-product-design">
-						<div class="portfolio">
-							<div class="portfolio-thumb">
-								<img src="images/portfolio/05.jpg" alt="portfolio thumb">
-							</div>
-						</div>
-					</div>
-					<!--// Single Portfolio -->
+        <div class="container mt-5 pt-5">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-6">
+                    <div class="row">
+                        <div class="text-left">
+                            <h2 class="mb-3">Join us!</h2>
+                            <h4 class="mb-3">You’ll be welcomed with open arms into our vibrant community.</h4>
+                        </div>
+                    </div>
 
-					<!-- Single Portfolio -->
-					<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 portfolio-single pfolio-filter-branding pfolio-filter-product-design">
-						<div class="portfolio">
-							<div class="portfolio-thumb">
-								<img src="images/portfolio/06.jpg" alt="portfolio thumb">
-							</div>
-						</div>
-					</div>
-					<!--// Single Portfolio -->
+                    <div class="row mt-5">
+                        <div class="col-md-4">
+                            <h3>>2k</h3>
+                            <p>Downloads</p>
+                        </div>
+                        <div class="col-md-4">
+                            <h3>>100</h3>
+                            <p>S&R operations in 3 countries</p>
+                        </div>
+                        <div class="col-md-4">
+                            <h3>4</h3>
+                            <p>Years of development</p>
+                        </div>
+                    </div>
 
-					<!-- Single Portfolio -->
-					<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 portfolio-single pfolio-filter-branding pfolio-filter-product-design">
-						<div class="portfolio">
-							<div class="portfolio-thumb">
-								<img src="images/portfolio/07.jpg" alt="portfolio thumb">
-							</div>
-						</div>
-					</div>
-					<!--// Single Portfolio -->
-
-					<!-- Single Portfolio -->
-					<div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 portfolio-single pfolio-filter-branding pfolio-filter-product-design">
-						<div class="portfolio">
-							<div class="portfolio-thumb">
-								<img src="images/portfolio/08.jpg" alt="portfolio thumb">
-							</div>
-						</div>
-					</div>
-					<!--// Single Portfolio -->
-
-				</div>
-				<!--// Portfolios -->
-
-			</section>
-			<!--// Portfolio Area -->
-
-
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-6 offset-lg-3">
-						<div class="section-title text-center">
-							<h2>Our team</h2>
-						</div>
-					</div>
-				</div>
-			</div>
-			            <!-- Team Member -->
-			            <section class="cr-section team-member-area section-padding-xlg bg-white">
-			                <div class="container">
-			                    <div class="row justify-content-center team-gallery">
-
-			                        <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-																	<!-- Single Team -->
-			                            <div class="team">
-			                                <div class="team-thumb">
-			                                    <img src="images/team/gosha.jpg" alt="team thumb">
-			                                </div>
-			                                <div class="team-content text-center">
-			                                    <h5>Georgy Perevozchikov (Перевозчиков Георгий)</h5>
-			                                    <h6>Team Lead</h6>
-			                                </div>
-			                            </div>
-			                            <!--// Single Team -->
-			                        </div>
-
-															<div class="col-lg-3 col-md-6 col-sm-6 col-12">
-																	<!-- Single Team -->
-			                            <div class="team">
-			                                <div class="team-thumb">
-			                                    <img src="images/team/ei-grad.jpg" alt="team thumb">
-			                                </div>
-			                                <div class="team-content text-center">
-			                                    <h5>Grigoriev Andrey (Григорьев Андрей)</h5>
-			                                    <h6>Backend, Data Scientist</h6>
-			                                </div>
-			                            </div>
-			                            <!--// Single Team -->
-			                        </div>
-
-																	<!-- Single Team Member-->
-															<div class="col-lg-3 col-md-6 col-sm-6 col-12">
-			                            <div class="team">
-			                                <div class="team-thumb">
-			                                    <img src="images/team/ksenia.jpg" alt="team thumb">
-			                                </div>
-			                                <div class="team-content text-center">
-			                                    <h5>Terekhova Ksenia (Терехова Ксения)</h5>
-			                                    <h6>Data Scientist</h6>
-			                                </div>
-			                            </div>
-			                        </div>
-			                        </div>
-			                        <div class="row justify-content-center team-gallery">
-											     		<!--// Single Team Member-->
-
-																	<!-- Single Team Member-->
-															<div class="col-lg-3 col-md-6 col-sm-6 col-12">
-			                            <div class="team">
-			                                <div class="team-thumb">
-			                                    <img src="images/team/balezz.jpg" alt="team thumb">
-			                                </div>
-			                                <div class="team-content text-center">
-			                                    <h5>Labintsev Andrey (Лабинцев Андрей)</h5>
-			                                    <h6>Data Scientist</h6>
-			                                </div>
-			                            </div>
-			                        </div>
-											     		<!--// Single Team Member-->
-
-															<!-- Single Team Member-->
-													<div class="col-lg-3 col-md-6 col-sm-6 col-12">
-															<div class="team">
-																	<div class="team-thumb">
-																			<img src="images/team/palladium.jpg" alt="team thumb">
-																	</div>
-																	<div class="team-content text-center">
-																			<h5>Drupin Oleg (Дрюпин Олег)</h5>
-																			<h6>Data Scientist</h6>
-																	</div>
-															</div>
-													</div>
-													<!--// Single Team Member-->
-
-													<!-- Single Team Member-->
-											<div class="col-lg-3 col-md-6 col-sm-6 col-12">
-													<div class="team">
-															<div class="team-thumb">
-																	<img src="images/team/appetito.jpg" alt="team thumb">
-															</div>
-															<div class="team-content text-center">
-																	<h5>Homyakov Yuri (Хомяков Юрий)</h5>
-																	<h6>Data Scientist</h6>
-															</div>
-													</div>
-											</div>
-											<!--// Single Team Member-->
-
-											<!-- Single Team Member-->
-									</div>
-			                        <div class="row justify-content-center team-gallery">
-
-									<div class="col-lg-3 col-md-6 col-sm-6 col-12">
-											<div class="team">
-													<div class="team-thumb">
-															<img src="images/team/olegR1.jpg" alt="team thumb">
-													</div>
-													<div class="team-content text-center">
-															<h5>Ryahovskiy Oleg (Ряховский Олег)</h5>
-															<h6>Data Scientist</h6>
-													</div>
-											</div>
-									</div>
-									<!--// Single Team Member-->
-
-									<!-- Single Team Member-->
-							<div class="col-lg-3 col-md-6 col-sm-6 col-12">
-									<div class="team">
-											<div class="team-thumb">
-													<img src="images/team/wanteich.jpg" alt="team thumb">
-											</div>
-											<div class="team-content text-center">
-													<h5>Dmitry (Дмитрий) @wanteich</h5>
-													<h6>UAV Pilot</h6>
-											</div>
-									</div>
-							</div>
-							<!--// Single Team Member-->
-									<!-- Single Team Member-->
-							<div class="col-lg-3 col-md-6 col-sm-6 col-12">
-									<div class="team">
-											<div class="team-thumb">
-													<img src="images/team/ipovalyaev.jpg" alt="team thumb">
-											</div>
-											<div class="team-content text-center">
-													<h5>Ivan Povalyaev</h5>
-													<h6>Backend, data science</h6>
-											</div>
-									</div>
-							</div>
-							<!--// Single Team Member-->
-
-			                    </div>
-			                </div>
-			            </section>
-			            <!--// Team Members -->
+                </div>
+            </div>
+        </div>
 
 
-		</main>
-		<!--// Start Page Content -->
+        <div class="container-fluid px-0 bg-home">
+            <div class="container-fluid">
+                <div class="container mt-5 pt-5">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <div class="text-center">
+                                <h2>Our active members.</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-		<!-- Footer Area -->
-		<footer class="footer-area">
-  <p><a name="contact"></a></p>
-			<!-- Footer Widgets Area -->
-			<div class="bg-footer-1 jarallax section-padding-xs" data-black-overlay="7">
-				<div class="container">
-					<div class="row widgets footer-widgets">
+        <div id="teamCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#teamCarousel" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="d-flex justify-content-center flex-wrap">
+                        <div class="card mt-5">
+                            <div class="card-body d-flex flex-column">
+                                <img class="team-thumb img-fluid mt-3 ms-5" src="assets/team/gosha.jpg" width="180" height="180" alt="gosha" />
+                                <div class="mt-auto ms-3 mb-3">
+                                    <h6 class="card-title">Georgy Perevozchikov</h6>
+                                    <p class="card-text">Head of the project, Senior Backend and Computer Vision developer.</p>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="card mx-md-5 mt-5">
+                            <div class="card-body d-flex flex-column">
+                                <img class="team-thumb img-fluid mt-3 ms-5" src="assets/team/ipovalyaev.jpg" width="180" height="180" alt="gosha" />
+                                <div class="mt-auto ms-3 mb-3">
+                                    <h6 class="card-title">Ivan Povalyaev</h6>
+                                    <p class="card-text">Senior Backend and Computer Vision developer.</p>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="card mt-5">
+                            <div class="card-body d-flex flex-column">
+                                <img class="team-thumb img-fluid mt-3 ms-5" src="assets/team/palladium.jpg" width="180" height="180" alt="gosha" />
+                                <div class="mt-auto ms-3 mb-3">
+                                    <h6 class="card-title">Oleg Severov</h6>
+                                    <p class="card-text">Data Scientist.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center flex-wrap">
+                        <div class="card mt-5">
+                            <div class="card-body d-flex flex-column">
+                                <img class="team-thumb img-fluid mt-3 ms-5" src="assets/team/ksenia.jpg" width="180" height="180" alt="gosha" />
+                                <div class="mt-auto ms-3 mb-3">
+                                    <h6 class="card-title">Ksenia Terekhova</h6>
+                                    <p class="card-text">Computer Vision developer.</p>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="card mx-md-5 mt-5">
+                            <div class="card-body d-flex flex-column">
+                                <img class="team-thumb img-fluid mt-3 ms-5" src="assets/team/balezz.jpg" width="180" height="180" alt="gosha" />
+                                <div class="mt-auto ms-3 mb-3">
+                                    <h6 class="card-title">Andrey Labintsev</h6>
+                                    <p class="card-text">Android and ML developer.</p>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="card mt-5">
+                            <div class="card-body d-flex flex-column">
+                                <img class="team-thumb img-fluid mt-3 ms-5" src="assets/team/wanteich.jpg" width="180" height="180" alt="gosha" />
+                                <div class="mt-auto ms-3 mb-3">
+                                    <h6 class="card-title">Dmitry Wanteich</h6>
+                                    <p class="card-text">UAV Pilot.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-center flex-wrap">
+                        <div class="card mt-5">
+                            <div class="card-body d-flex flex-column">
+                                <img class="team-thumb img-fluid mt-3 ms-5" src="assets/team/rumata.jpg" width="180" height="180" alt="gosha" />
+                                <div class="mt-auto ms-3 mb-3">
+                                    <h6 class="card-title">Julia Ustinovich</h6>
+                                    <p class="card-text">UAV Pilot, Dataset master.</p>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="card mx-md-5 mt-5">
+                            <div class="card-body d-flex flex-column">
+                                <img class="team-thumb img-fluid mt-3 ms-5" src="assets/team/olegR.jpg" width="180" height="180" alt="gosha" />
+                                <div class="mt-auto ms-3 mb-3">
+                                    <h6 class="card-title">Oleg Ryahovsky</h6>
+                                    <p class="card-text">UAV Pilot, ML developer.</p>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="card mt-5">
+                            <div class="card-body d-flex flex-column">
+                                <img class="team-thumb img-fluid mt-3 ms-5" src="assets/team/appetito.jpg" width="180" height="180" alt="gosha" />
+                                <div class="mt-auto ms-3 mb-3">
+                                    <h6 class="card-title">Yry Homyakov</h6>
+                                    <p class="card-text">UAV Engineer.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#teamCarousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#teamCarousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
 
-						<!-- Single Widget -->
-						<div class="col-lg-3 col-md-6">
-							<!-- Widget About -->
-							<div class="single-widget about-widget">
-								<h4 class="widget-title">Contacts</h4>
-								<ul>
-									<li>
-										<i class="fa fa-map-marker"></i>
-										<p>Russia, Moscow</p>
-									</li>
-									<li>
-										<i class="fa fa-envelope"></i>
-										<p>Email :
-											<a href="gosha20777@live.ru">gosha20777@live.ru</a></p>
-									</li>
-									<li>
-										<i class="fa fa-envelope"></i>
-										<p>Email :
-											<a href="ipovalyaev@seznam.cz">ipovalyaev@seznam.cz</a></p>
-									</li>
+        <footer class="container-fluid footer">
+            <div class="container mt-5 pt-5">
+                <div class="row pb-5">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="row">
+                            <h4><b>Lacmus Foundation</b></h4>
+                            <p>Search for missing people</p>
+                        </div>
+                        <div class="row">
+                            <div class="d-flex mb-4 mb-md-0">
+                                <a href="https://github.com/lacmus-foundation" target="_blank" class="me-3">
+                                    <img src="assets/gh-social.svg" alt="Github Logo" />
+                                </a>
+                                <a href="https://twitter.com/lacmus_found" target="_blank" class="me-3">
+                                    <img src="assets/twitter-social.svg" alt="Twitter Logo" />
+                                </a>
+                                <a href="https://www.youtube.com/watch?v=4QfOBTHEgJU" target="_blank" class="me-3">
+                                    <img src="assets/youtube-social.svg" alt="Youtube Logo" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-2">
+                        <h6>Projects</h6>
+                        <a href="https://github.com/lacmus-foundation/lacmus-app" target="_blank">
+                            <p>Desctop Application</p>
+                        </a>
+                        <a href="https://github.com/lacmus-foundation/lacmus-web-api" target="_blank">
+                            <p>Web API</p>
+                        </a>
+                        <a href="https://github.com/lacmus-foundation/ladd-and-weights" target="_blank">
+                            <p>Dataset</p>
+                        </a>
+                        <a href="https://github.com/lacmus-foundation/lacmus" target="_blank">
+                            <p>Neural Network</p>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-2">
+                        <h6>Support</h6>
+                        <a href="https://docs.lacmus.ml/">
+                            <p>Documentation</p>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-2">
+                        <h6>Join the community</h6>
+                        <a href="https://t.me/found_lacmus">
+                            <p>Telegram</p>
+                        </a>
+                        <a href="mailto:lacmusfoundation@gmail.com">
+                            <p>lacmusfoundation@gmail.com</p>
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-2">
+                       <div class="foundation d-flex">
+                           <a class="ms-lg-auto" href="https://ods.ai/">
+                               <img src="./assets/ods_logo.svg" alt="ODS">
+                           </a>
+                       </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <p class="mb-0 fs-6 text-center pb-3">Lacmus Foundation, 2018-2022</p>
+                </div>
+            </div>
+        </footer>
+    </div>
 
-									<li>
-										<div class="social-icons">
-											<ul>
-												<li class="facebook">
-													<a href="https://facebook.com">
-														<i class="fa fa-facebook"></i>
-													</a>
-												</li>
-												<li class="twitter">
-													<a href="https://twitter.com">
-														<i class="fa fa-twitter"></i>
-													</a>
-												</li>
-												<li class="google-plus">
-													<a href="https://plus.google.com">
-														<i class="fa fa-google-plus"></i>
-													</a>
-												</li>
-												<li class="linkedin">
-													<a href="https://linkedin.com">
-														<i class="fa fa-linkedin"></i>
-													</a>
-												</li>
-											</ul>
-										</div>
-									</li>
-								</ul>
-							</div>
-							<!--// Widget About -->
-						</div>
-						<!--// Single Widget -->
-
-
-					</div>
-				</div>
-			</div>
-			<!--// Footer Widgets Area -->
-
-			<!-- Footer Copyright Area -->
-			<div class="footer-copyright-area">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12">
-							<div class="copyright text-center">
-								<p>Copyright &copy; 2020
-									<a href="https://freethemescloud.com/"> Free themes Cloud</a>
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!--// Footer Copyright Area -->
-
-		</footer>
-		<!--// Footer Area -->
-
-	</div>
-	<!-- //Main wrapper -->
-
-	<!-- JS Files -->
-	<script src="js/vendor/jquery-3.2.1.min.js"></script>
-	<script src="js/popper.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/plugins.js"></script>
-	<script src="js/active.js"></script>
-	<script src="js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 
 </html>
